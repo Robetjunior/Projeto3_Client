@@ -1,0 +1,8 @@
+import React from "react";
+import "../assets/styles/App.css";
+
+function App() {
+  return <div></div>;
+}
+
+export default App;
