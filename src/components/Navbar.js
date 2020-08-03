@@ -85,7 +85,7 @@ const Navbar = (props) => {
             </Link>
           </li>
           <li className="nav-item ml-auto">
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/loginnpm">
               <svg
                 width="1em"
                 height="1em"
@@ -105,7 +105,7 @@ const Navbar = (props) => {
                 />
                 <path d="M6.5 14a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1z" />
               </svg>
-              Contact
+             Login
             </Link>
           </li>
           <li className="nav-item ml-auto">
