@@ -23,7 +23,7 @@ const FormSignup = (props) => {
           className="form-control form-control-lg"
           id="authUsernameField"
           name="username"
-          onChange={handleSubmit}
+          onChange={handleChange}
           value={props.user.username}
         />
       </div>

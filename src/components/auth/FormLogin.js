@@ -1,11 +1,11 @@
 import React from "react"
 
-const AuthLogin = (props) => {
+const FormLogin = (props) => {
     function handleChange(event){
-    props.SetUSer({
-        ...props.user,
-        [event.currentTarget.userName]: event.current
-    })
+        props.SetUSer({
+            ...props.user,
+            [event.currentTarget.userName]: event.currentTarget.value,
+        })
 }
 
     async function handleSubmit(event){
@@ -45,4 +45,4 @@ const AuthLogin = (props) => {
     );
 };
 
-export default AuthLogin
+export default FormLogin

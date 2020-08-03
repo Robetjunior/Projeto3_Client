@@ -2,15 +2,15 @@ import React , { useState} from "react";
 import { useHistory} from "react-router-dom"
 
 import authApi from "../../apis/auth";
-
+import FormLogin from './FormLogin';
 
 function Login (props){
 
     const history = useHistory();
 
     const [user, setUser] = useState({
-        username: "",
-        password: ""
+        username= "",
+        password= ""
     })
 
     async function handleSubmit(data){

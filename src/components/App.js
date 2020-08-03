@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div className="contaienr-fluid w75 mt-5">
+      <div className="container-fluid w75 mt-5">
         <Switch>
           <div></div>
         </Switch>

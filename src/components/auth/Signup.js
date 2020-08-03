@@ -5,7 +5,7 @@ import authApi from "../../apis/auth";
 
 import FormSignup from './FormSignup';
 
-function Signup(props) { 
+function Signup() { 
     const history = useHistory();
 
     const [user, setUser] = useState({
