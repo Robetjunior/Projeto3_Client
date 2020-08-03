@@ -105,7 +105,7 @@ const Navbar = (props) => {
                 />
                 <path d="M6.5 14a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1z" />
               </svg>
-             Login
+              Login
             </Link>
           </li>
           <li className="nav-item ml-auto">
@@ -131,14 +131,14 @@ const Navbar = (props) => {
             </Link>
           </li>
         </ul>
-        {/* <span className="navbar-text mr-2"></span> */}
-        {/* {props.loggedInUser ? props.loggedInUser.username : ""} */}
-        {/* </span> */}
-        {/* {props.loggedInUser._id ? (
-        <Link className="text-light" to="/logout">
-          Logout
-        </Link>
-      ) : null} */}
+        <span className="navbar-text mr-2">
+          {props.loggedInUser ? props.loggedInUser.username : ""}
+        </span>
+        {props.loggedInUser._id ? (
+          <Link className="text-light" to="/logout">
+            Logout
+          </Link>
+        ) : null}
       </div>
     </nav>
   );
