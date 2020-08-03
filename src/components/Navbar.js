@@ -109,7 +109,7 @@ const Navbar = (props) => {
             </Link>
           </li>
           <li className="nav-item ml-auto">
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/signup">
               <svg
                 width="1em"
                 height="1em"
