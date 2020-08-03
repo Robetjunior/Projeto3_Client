@@ -84,56 +84,62 @@ const Navbar = (props) => {
               Services
             </Link>
           </li>
-          <li className="nav-item ml-auto">
-            <Link className="nav-link" to="/login">
-              <svg
-                width="1em"
-                height="1em"
-                viewBox="0 0 16 16"
-                className="bi bi-headset"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8 1a5 5 0 0 0-5 5v4.5H2V6a6 6 0 1 1 12 0v4.5h-1V6a5 5 0 0 0-5-5z"
-                />
-                <path d="M11 8a1 1 0 0 1 1-1h2v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V8zM5 8a1 1 0 0 0-1-1H2v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V8z" />
-                <path
-                  fill-rule="evenodd"
-                  d="M13.5 8.5a.5.5 0 0 1 .5.5v3a2.5 2.5 0 0 1-2.5 2.5H8a.5.5 0 0 1 0-1h3.5A1.5 1.5 0 0 0 13 12V9a.5.5 0 0 1 .5-.5z"
-                />
-                <path d="M6.5 14a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1z" />
-              </svg>
-              Login
-            </Link>
-          </li>
-          <li className="nav-item ml-auto">
-            <Link className="nav-link" to="/signup">
-              <svg
-                width="1em"
-                height="1em"
-                viewBox="0 0 16 16"
-                className="bi bi-person-square"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-                />
-              </svg>
-              Sign Up
-            </Link>
-          </li>
+
+          <span className="navbar-text mr-2">
+            {props.loggedInUser ? (
+              props.loggedInUser.email
+            ) : (
+              <div>
+                <li className="nav-item ml-auto">
+                  <Link className="nav-link" to="/login">
+                    <svg
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      className="bi bi-headset"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 1a5 5 0 0 0-5 5v4.5H2V6a6 6 0 1 1 12 0v4.5h-1V6a5 5 0 0 0-5-5z"
+                      />
+                      <path d="M11 8a1 1 0 0 1 1-1h2v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V8zM5 8a1 1 0 0 0-1-1H2v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V8z" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M13.5 8.5a.5.5 0 0 1 .5.5v3a2.5 2.5 0 0 1-2.5 2.5H8a.5.5 0 0 1 0-1h3.5A1.5 1.5 0 0 0 13 12V9a.5.5 0 0 1 .5-.5z"
+                      />
+                      <path d="M6.5 14a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1z" />
+                    </svg>
+                    Login
+                  </Link>
+                </li>
+                <li className="nav-item ml-auto">
+                  <Link className="nav-link" to="/signup">
+                    <svg
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      className="bi bi-person-square"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                      />
+                    </svg>
+                    Sign Up
+                  </Link>
+                </li>
+              </div>
+            )}
+          </span>
         </ul>
-        <span className="navbar-text mr-2">
-          {props.loggedInUser ? props.loggedInUser.username : ""}
-        </span>
         {props.loggedInUser._id ? (
           <Link className="text-light" to="/logout">
             Logout

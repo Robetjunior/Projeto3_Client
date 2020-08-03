@@ -1,47 +1,44 @@
-import React , { useState} from "react";
-import { useHistory} from "react-router-dom"
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import authApi from "../../apis/auth";
-import FormLogin from './FormLogin';
+import FormLogin from "./FormLogin";
 
-function Login (props){
+function Login() {
+  const history = useHistory();
 
-    const history = useHistory();
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
 
-    const [user, setUser] = useState({
-        username: "",
-        password: ""
-    })
+  async function handleSubmit(data) {
+    console.log(data);
+    try {
+      const result = await authApi.post("/login", data);
 
-    async function handleSubmit(data){
-        try{
+      setUser({ ...result.data });
 
-            const result = await authApi.post("/login", data)
-            
-            props.setUser({...result.data});
+      localStorage.setItem("loggedInUser", JSON.stringify({ ...result.data }));
 
-            localStorage.setItem("loggedInUser", JSON.stringify({...result.data}));
-
-            history.push("/");
-        }
-        catch (err){
-            console.error(err)
-        }
+      history.push("/");
+    } catch (err) {
+      console.error(err);
     }
+  }
 
-    return (
-        <div>
-            <h1>Login</h1>
-            <hr></hr>
-            <FormLogin
-            handleSubmit={handleSubmit}
-            setUser={setUser}
-            user={user}
-            buttonText="Login"
-            />
-        </div>
-    )
-
+  return (
+    <div>
+      <h1>Login</h1>
+      <hr></hr>
+      <FormLogin
+        handleSubmit={handleSubmit}
+        setUser={setUser}
+        user={user}
+        buttonText="Login"
+      />
+    </div>
+  );
 }
 
 export default Login;
