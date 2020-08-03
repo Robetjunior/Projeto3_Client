@@ -5,7 +5,12 @@ import Navbar from "./Navbar";
 //SIGNUP/LOGIN/LOGOUT
 
 import Signup from "./auth/Signup";
+
 import Login from "./auth/Login"
+
+import Logout from "./auth/Logout";
+import PrivateRoute from "./auth/PrivateRoute";
+
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -19,10 +24,16 @@ function App() {
       <div className="container-fluid w75 mt-5">
         <Switch>
           <Route path="/signup" component={Signup} />
+
           <Route path="/login" render={() => (
               <Login user={loggedInUser} setUser={setLoggedInUser} />
             )}
             />
+          <Route
+            path="/logout"
+            render={() => <Logout setUser={setLoggedInUser} />}
+          />
+
         </Switch>
       </div>
     </BrowserRouter>
