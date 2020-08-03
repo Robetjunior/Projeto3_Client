@@ -9,6 +9,7 @@ import HomePage from "./HomePage";
 import Signup from "./auth/Signup";
 import Login from "./auth/Login";
 import Logout from "./auth/Logout";
+import UserProfile from "./auth/UserProfile";
 import PrivateRoute from "./auth/PrivateRoute";
 
 function App() {
@@ -38,6 +39,12 @@ function App() {
           <Route
             path="/logout"
             render={() => <Logout setUser={setLoggedInUser} />}
+          />
+
+          <PrivateRoute
+            path="/userProfile"
+            component={UserProfile}
+            user={loggedInUser}
           />
         </Switch>
       </div>

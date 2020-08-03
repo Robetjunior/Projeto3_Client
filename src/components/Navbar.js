@@ -88,7 +88,7 @@ const Navbar = (props) => {
           {props.loggedInUser._id ? (
             <div>
               <span className="navbar-text mr-2">
-                <Link className="text-light" to="/">
+                <Link className="text-light" to="/userProfile">
                   {props.loggedInUser.email}
                 </Link>
               </span>
