@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import authApi from "../../apis/auth";
 import FormLogin from "./FormLogin";
 
-function Login() {
+function Login(props) {
   const history = useHistory();
 
   const [user, setUser] = useState({
@@ -17,7 +17,7 @@ function Login() {
     try {
       const result = await authApi.post("/login", data);
 
-      setUser({ ...result.data });
+      props.setUser({ ...result.data });
 
       localStorage.setItem("loggedInUser", JSON.stringify({ ...result.data }));
 
