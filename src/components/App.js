@@ -5,13 +5,23 @@ import "../assets/styles/App.css";
 
 import Navbar from "./Navbar";
 
+//SIGNUP/LOGIN/LOGOUT
+import Signup from "./auth/Signup";
+
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("loggedInUser") || '""');
+    setLoggedInUser({ ...storedUser });
+  }, []);
+
   return (
     <BrowserRouter>
       <Navbar />
       <div className="container-fluid w75 mt-5">
         <Switch>
-          <div></div>
+          <Route path="/signup" component={Signup} />
         </Switch>
       </div>
     </BrowserRouter>

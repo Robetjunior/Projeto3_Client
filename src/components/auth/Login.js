@@ -9,8 +9,8 @@ function Login (props){
     const history = useHistory();
 
     const [user, setUser] = useState({
-        username= "",
-        password= ""
+        username: "",
+        password: ""
     })
 
     async function handleSubmit(data){
