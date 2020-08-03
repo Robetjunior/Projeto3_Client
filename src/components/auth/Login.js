@@ -33,7 +33,7 @@ function Login (props){
         <div>
             <h1>Login</h1>
             <hr></hr>
-            <AuthForm
+            <FormLogin
             handleSubmit={handleSubmit}
             setUser={setUser}
             user={user}
