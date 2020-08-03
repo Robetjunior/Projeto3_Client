@@ -9,7 +9,6 @@ const Logout = (props) => {
   useEffect(() => {
     (async function sendLogout() {
       try {
-        console.log("ENTROU NO USEEFFECT");
         await authApi.post("/logout");
         localStorage.removeItem("loggedInUser");
         props.setUser({});
