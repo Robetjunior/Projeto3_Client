@@ -18,7 +18,7 @@ function CreateAnnouncement() {
     try {
       const result = await announcementApi.post("/create", data);
 
-      history.push("/profile");
+      history.push("/ong/profile");
     } catch (err) {
       console.error(err);
     }
