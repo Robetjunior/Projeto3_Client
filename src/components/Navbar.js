@@ -26,7 +26,7 @@ const Navbar = (props) => {
                 width="1em"
                 height="1em"
                 viewBox="0 0 16 16"
-                className="bi bi-house-fill"
+                className="bi bi-house-fill mr-1"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -43,12 +43,12 @@ const Navbar = (props) => {
             </Link>
           </li>
           <li className="nav-item ml-auto">
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/about">
               <svg
                 width="1em"
                 height="1em"
                 viewBox="0 0 16 16"
-                className="bi bi-info-circle"
+                className="bi bi-info-circle mr-1"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -63,12 +63,12 @@ const Navbar = (props) => {
             </Link>
           </li>
           <li className="nav-item ml-auto">
-            <Link className="nav-link " to="/">
+            <Link className="nav-link " to="/announcements">
               <svg
                 width="1em"
                 height="1em"
                 viewBox="0 0 16 16"
-                className="bi bi-layout-text-window"
+                className="bi bi-layout-text-window mr-1"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -81,14 +81,28 @@ const Navbar = (props) => {
                   d="M11 15V4h1v11h-1zm4.5-11H.5V3h15v1zM3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
                 />
               </svg>
-              Services
+              My Announcements
             </Link>
           </li>
 
           {props.loggedInUser._id ? (
             <div>
               <span className="navbar-text mr-2">
-                <Link className="text-light" to="/">
+                <Link className="text-light" to="/ong/profile">
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    className="bi bi-envelope mr-1"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"
+                    />
+                  </svg>
+
                   {props.loggedInUser.email}
                 </Link>
               </span>
@@ -101,20 +115,19 @@ const Navbar = (props) => {
                     width="1em"
                     height="1em"
                     viewBox="0 0 16 16"
-                    className="bi bi-headset"
+                    className="bi bi-door-open mr-1"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       fillRule="evenodd"
-                      d="M8 1a5 5 0 0 0-5 5v4.5H2V6a6 6 0 1 1 12 0v4.5h-1V6a5 5 0 0 0-5-5z"
+                      d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"
                     />
-                    <path d="M11 8a1 1 0 0 1 1-1h2v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V8zM5 8a1 1 0 0 0-1-1H2v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V8z" />
                     <path
                       fillRule="evenodd"
-                      d="M13.5 8.5a.5.5 0 0 1 .5.5v3a2.5 2.5 0 0 1-2.5 2.5H8a.5.5 0 0 1 0-1h3.5A1.5 1.5 0 0 0 13 12V9a.5.5 0 0 1 .5-.5z"
+                      d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z"
                     />
-                    <path d="M6.5 14a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1z" />
+                    <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z" />
                   </svg>
                   Login
                 </Link>
@@ -125,7 +138,7 @@ const Navbar = (props) => {
                     width="1em"
                     height="1em"
                     viewBox="0 0 16 16"
-                    className="bi bi-person-square"
+                    className="bi bi-person-square mr-1"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -146,6 +159,24 @@ const Navbar = (props) => {
         </ul>
         {props.loggedInUser._id ? (
           <Link className="text-light" to="/logout">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              className="bi bi-door-closed mr-1"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2zm1 0v13h8V2H4z"
+              />
+              <path d="M7 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+              <path
+                fillRule="evenodd"
+                d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
             Logout
           </Link>
         ) : null}
