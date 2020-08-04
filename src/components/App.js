@@ -11,19 +11,17 @@ import Login from "./auth/Login";
 import Logout from "./auth/Logout";
 import UserProfile from "./auth/UserProfile";
 import PrivateRoute from "./auth/PrivateRoute";
-import AboutUs from "./AboutUs"
-
-//Announcement/ AnnouncementList/ Search
+import AboutUs from "./AboutUs";
 
 // import AnnouncementList from "./announcements/AnnouncementList"
-import Search from "./announcements/Search"
-import Announcement from "./announcements/Announcement"
+import Search from "./announcements/Search";
+import Announcement from "./announcements/Announcement";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
 
   // const [announcementList, setAnnouncementList] = useState(AnnouncementList)
-  
+
   // function filterAnnouncements(name) {
   //   if (!name) {
   //     return setAnnouncementList([...Announcement])
@@ -31,11 +29,10 @@ function App() {
   //   const filteredAnnouncements = announcementList.filter((Announcement) => {
   //     return Announcement.title.toLowerCase().includes(name.toLowerCase())
   //   })
-    
+
   //   return setAnnouncementList([...filteredAnnouncements])
   // }
-  
-  
+
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("loggedInUser") || '""');
     setLoggedInUser({ ...storedUser });
@@ -48,7 +45,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/about" component={AboutUs} />
-          
+
           <Route path="/signup" component={Signup} />
 
           <Route
@@ -62,19 +59,16 @@ function App() {
             path="/logout"
             render={() => <Logout setUser={setLoggedInUser} />}
           />
-          <Route 
-          path="/announcement"
-          component={Announcement} />
+
+          <Route path="/announcement/create" component={Announcement} />
           {/* <Route path="/announcements" component={announcementList} /> */}
-          <Route path="/announcements"  component={Search}/>
-          
+          <Route path="/announcements" component={Search} />
 
           <PrivateRoute
             path="/ong/profile"
             component={UserProfile}
             user={loggedInUser}
           />
-
         </Switch>
       </div>
     </BrowserRouter>
