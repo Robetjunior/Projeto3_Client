@@ -70,7 +70,7 @@ function App() {
           
 
           <PrivateRoute
-            path="/userProfile"
+            path="/ong/profile"
             component={UserProfile}
             user={loggedInUser}
           />
