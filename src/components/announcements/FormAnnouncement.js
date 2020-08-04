@@ -43,10 +43,10 @@ const FormAnnouncement = (props) =>{
             <div className="form-group">
                 <label htmlFor="exampleInputOngId">Imagem</label>
                 <input
-                type="text"
+                type="file"
                 className="form-control form-control-lg"
                 id="announcementOngIdField"
-                name="OngId"
+                name="imgPath"
                 onChange={handleChange}
                 value={props.announcement.imgPath}
                 />
