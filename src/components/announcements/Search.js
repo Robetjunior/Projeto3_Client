@@ -41,9 +41,8 @@ function Search() {
         type="text"
         className="form-control form-control-lg"
         placeholder="Search for a announcement"
-        // onKeyUp={(event) => props.handleSearch(event.currentTarget.value)}
       />
-      <ListAnnouncement handleSearch={filterAnnoun} />
+      <ListAnnouncement announList={announList} handleSearch={filterAnnoun} />
     </div>
   );
 }
