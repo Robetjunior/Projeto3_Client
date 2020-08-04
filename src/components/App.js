@@ -11,19 +11,15 @@ import Login from "./auth/Login";
 import Logout from "./auth/Logout";
 import UserProfile from "./auth/UserProfile";
 import PrivateRoute from "./auth/PrivateRoute";
-import AboutUs from "./AboutUs"
+import AboutUs from "./AboutUs";
 
-//Announcement/ AnnouncementList/ Search
-
-
-import Search from "./announcements/Search"
-import CreateAnnouncement from "./announcements/CreateAnnouncement"
+//ANNOUNCEMENTS
+import Search from "./announcements/Search";
+import CreateAnnouncement from "./announcements/CreateAnnouncement";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
 
-  
-  
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("loggedInUser") || '""');
     setLoggedInUser({ ...storedUser });
@@ -36,7 +32,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/about" component={AboutUs} />
-          
+
           <Route path="/signup" component={Signup} />
 
           <Route
@@ -50,21 +46,16 @@ function App() {
             path="/logout"
             render={() => <Logout setUser={setLoggedInUser} />}
           />
-          <Route 
-          path="/create/announcement"
-          component={CreateAnnouncement} />
 
-          <Route 
-          path="/announcements"  
-          component={Search}/>
-          
+          <Route path="/create/announcement" component={CreateAnnouncement} />
+
+          <Route path="/announcements" component={Search} />
 
           <PrivateRoute
             path="/ong/profile"
             component={UserProfile}
             user={loggedInUser}
           />
-
         </Switch>
       </div>
     </BrowserRouter>
