@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import ongApi from "../../apis/ong";
+
 const UserProfile = (props) => {
   const history = useHistory();
   const [user, setUser] = useState({});
+
   useEffect(() => {
     (async function sendProfile() {
       try {
