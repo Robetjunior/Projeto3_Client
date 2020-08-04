@@ -3,24 +3,30 @@ import React, { useState, useEffect } from "react";
 import announApi from "../../apis/announcement";
 import ListAnnouncement from "./ListAnnouncement";
 
+let announListBkp = [];
+
 function Search() {
   const [announList, setAnnouncList] = useState([]);
 
   useEffect(() => {
     (async function sendAnnoun() {
       try {
-        const response = await announApi.find("/");
+        const response = await announApi.get("/");
         setAnnouncList([...response.data]);
+        announListBkp = [...response.data];
         console.log(response.data);
       } catch (err) {
         console.error(err);
       }
     })();
-  });
+  }, []);
 
-  function filterAnnoun(term) {
+  function filterAnnoun(event) {
+    const term = event.currentTarget.value;
     if (!term) {
-      return setAnnouncList([...announList]);
+      console.log("CAIU NO IF");
+      console.log(announListBkp);
+      return setAnnouncList([...announListBkp]);
     }
     const filtered = announList.filter((announ) => {
       return announ.title.toLowerCase().includes(term.toLowerCase());
@@ -41,8 +47,9 @@ function Search() {
         type="text"
         className="form-control form-control-lg"
         placeholder="Search for a announcement"
+        onKeyUp={filterAnnoun}
       />
-      <ListAnnouncement announList={announList} handleSearch={filterAnnoun} />
+      <ListAnnouncement announList={announList} />
     </div>
   );
 }
