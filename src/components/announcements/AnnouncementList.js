@@ -2,6 +2,7 @@ import React from "react";
 import Announcement from "./Announcement"
 
 function AnnouncementList(props) {
+
     return(
         <div>
             {props.announcementList.map((announcement, i) =>{
@@ -12,7 +13,6 @@ function AnnouncementList(props) {
                     description={announcement.description}
                     imgPath={announcement.imgPath}
                     value={announcement.value}
-
                     />
                 )
             })}
