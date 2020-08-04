@@ -15,25 +15,13 @@ import AboutUs from "./AboutUs"
 
 //Announcement/ AnnouncementList/ Search
 
-// import AnnouncementList from "./announcements/AnnouncementList"
+
 import Search from "./announcements/Search"
-import Announcement from "./announcements/Announcement"
+import CreateAnnouncement from "./announcements/CreateAnnouncement"
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
 
-  // const [announcementList, setAnnouncementList] = useState(AnnouncementList)
-  
-  // function filterAnnouncements(name) {
-  //   if (!name) {
-  //     return setAnnouncementList([...Announcement])
-  //   }
-  //   const filteredAnnouncements = announcementList.filter((Announcement) => {
-  //     return Announcement.title.toLowerCase().includes(name.toLowerCase())
-  //   })
-    
-  //   return setAnnouncementList([...filteredAnnouncements])
-  // }
   
   
   useEffect(() => {
@@ -63,10 +51,12 @@ function App() {
             render={() => <Logout setUser={setLoggedInUser} />}
           />
           <Route 
-          path="/announcement"
-          component={Announcement} />
-          {/* <Route path="/announcements" component={announcementList} /> */}
-          <Route path="/announcements"  component={Search}/>
+          path="/create/announcement"
+          component={CreateAnnouncement} />
+
+          <Route 
+          path="/announcements"  
+          component={Search}/>
           
 
           <PrivateRoute

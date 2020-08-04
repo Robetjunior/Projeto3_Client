@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import announcementApi from "../../apis/announcement";
 import FormAnnouncement from "./FormAnnouncement";
 
-function Announcement(){
+function CreateAnnouncement(){
     
     const history = useHistory();
 
@@ -58,4 +58,4 @@ function Announcement(){
     )
 }
 
-export default Announcement;
+export default CreateAnnouncement;
