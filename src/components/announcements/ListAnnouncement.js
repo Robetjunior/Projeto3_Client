@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import announcementApi from "../../apis/announcement";
 
 function ListAnnouncement() {
-  const [announcement, setAnnouncement] = useState({});
+  const [announcement, setAnnouncement] = useState([]);
 
   useEffect(() => {
     (async function handleSubmit() {
       try {
         const response = await announcementApi.get("/");
-        setAnnouncement(response);
+        setAnnouncement([...response.data]);
       } catch (err) {
         console.error(err);
       }
@@ -25,6 +25,7 @@ function ListAnnouncement() {
             <p>{ann.description}</p>
             <p>{ann.imgPath}</p>
             <p>{ann.value}</p>
+            <br></br>
           </div>
         );
       })}

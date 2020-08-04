@@ -16,9 +16,10 @@ function CreateAnnouncement() {
 
   async function handleSubmit(data) {
     try {
+      /////////// VERIFICAR ATRIBUTO ONGID ESTA VINDO VAZIO ///////////////////////////
       const result = await announcementApi.post("/create", data);
-
       history.push("/ong/profile");
+      /////////// VERIFICAR ATRIBUTO ONGID ESTA VINDO VAZIO ///////////////////////////
     } catch (err) {
       console.error(err);
     }
