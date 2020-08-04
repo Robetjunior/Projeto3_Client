@@ -22,7 +22,7 @@ const UserProfile = (props) => {
       <h3>Email: {user.email}</h3>
       <h3>Address: {user.address}</h3>
       <h3>Phone: {user.phone}</h3>
-      <h3>Phone: {user.description}</h3>
+      <h3>Description: {user.description}</h3>
     </div>
   );
 };
