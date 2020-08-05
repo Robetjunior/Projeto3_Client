@@ -11,6 +11,7 @@ import Signup from "./auth/Signup";
 import Login from "./auth/Login";
 import Logout from "./auth/Logout";
 import UserProfile from "./auth/UserProfile";
+import ListAnnProfile from "./auth/ListAnnProfile";
 import Transaction from "./Trasaction";
 import PrivateRoute from "./auth/PrivateRoute";
 import AboutUs from "./AboutUs";
@@ -38,8 +39,6 @@ function App() {
 
           <Route path="/signup" component={Signup} />
 
-          <Route path="/trasaction/create/:AnunId" component={Transaction} />
-
           <Route
             path="/login"
             render={() => (
@@ -61,8 +60,11 @@ function App() {
             component={UserProfile}
             user={loggedInUser}
           />
+          <Route path="/" exact component={ListAnnProfile} />
 
           <Route path="/announcement/:id" component={DetailsAnnoun} />
+
+          <Route path="/transaction/create/:AnunId" component={Transaction} />
         </Switch>
       </div>
     </BrowserRouter>

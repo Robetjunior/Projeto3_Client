@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom"
+
 import announApi from "../../apis/announcement";
 
 const DetailsAnnoun = () => {
@@ -16,13 +17,34 @@ const DetailsAnnoun = () => {
         console.error(err);
       }
     })();
-  }, []);
+  }, [id]);
 
   return (
     <div>
       <h3>{announ.title}</h3>
-      <h3>{announ.description}</h3>
-      <a href={`/transaction/create/`}>Dez Reais</a>
+      <p>Description: {announ.description}</p>
+      <h5>Value total: ${announ.value},00</h5>
+      <h4>Donate!</h4>
+      <Link
+        className="btn btn-lg btn-primary"
+        to={`/transaction/create/${id}?value=${30}`}
+      >
+        $30
+      </Link>
+
+      <Link
+        className="btn btn-lg btn-primary"
+        to={`/transaction/create/${id}?value=${50}`}
+      >
+        $50
+      </Link>
+
+      <Link
+        className="btn btn-lg btn-primary"
+        to={`/transaction/create/${id}?value=${100}`}
+      >
+        $100
+      </Link>
     </div>
   );
 };

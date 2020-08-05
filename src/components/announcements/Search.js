@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import announApi from "../../apis/announcement";
+
 import ListAnnouncement from "./ListAnnouncement";
 
 let announListBkp = [];
@@ -14,7 +15,6 @@ function Search() {
         const response = await announApi.get("/");
         setAnnouncList([...response.data]);
         announListBkp = [...response.data];
-        console.log(response.data);
       } catch (err) {
         console.error(err);
       }
@@ -24,8 +24,6 @@ function Search() {
   function filterAnnoun(event) {
     const term = event.currentTarget.value;
     if (!term) {
-      console.log("CAIU NO IF");
-      console.log(announListBkp);
       return setAnnouncList([...announListBkp]);
     }
     const filtered = announList.filter((announ) => {
