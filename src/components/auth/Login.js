@@ -28,8 +28,8 @@ function Login(props) {
   }
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="">
+      <h1 className="text-center">Login</h1>
       <hr></hr>
       <FormLogin
         handleSubmit={handleSubmit}

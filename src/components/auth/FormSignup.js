@@ -15,6 +15,7 @@ const FormSignup = (props) => {
   }
 
   return (
+    <div className="container-fluid mt-auto mr-auto d-flex justify-content-center align-items-center ">
     <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="exampleInputExamil1">Username</label>
@@ -82,10 +83,13 @@ const FormSignup = (props) => {
           value={props.user.cnpj}
         />
       </div>
-      <button type="subit" className="btn btn-lg btn-primary">
+      <div className="d-flex justify-content-center">
+      <button type="subit" className=" btn btn-lg btn-primary p-3">
         {props.buttonText}
       </button>
+      </div>
     </form>
+    </div>
   );
 };
 export default FormSignup;
