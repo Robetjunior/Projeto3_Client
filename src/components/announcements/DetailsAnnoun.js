@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
+import { Link } from "react-router-dom";
+
 import announApi from "../../apis/announcement";
 
 const DetailsAnnoun = () => {
@@ -10,7 +13,6 @@ const DetailsAnnoun = () => {
     (async function sendAnnoun() {
       try {
         const response = await announApi.get(`/${id}`);
-        console.log(response.data);
         setAnnoun(response.data);
       } catch (err) {
         console.error(err);
@@ -21,7 +23,36 @@ const DetailsAnnoun = () => {
   return (
     <div>
       <h3>{announ.title}</h3>
-      <h3>{announ.description}</h3>
+      <h3>Description: {announ.description}</h3>
+
+      <Link
+        className="btn btn-lg btn-primary"
+        value={10}
+        announ={announ}
+        to={`/transaction/create/${id}`}
+      >
+        10
+      </Link>
+
+      <Link
+        className="btn btn-lg btn-primary"
+        value={10}
+        announ={announ}
+        to={`/transaction/create/${id}`}
+      >
+        15
+      </Link>
+
+      <Link
+        className="btn btn-lg btn-primary"
+        value={10}
+        announ={announ}
+        to={`/transaction/create/${id}`}
+      >
+        20
+      </Link>
+      {/* Mandar valor da doacao E ID do anuncio para transaction.js */}
+      {/* <Link value={} */}
     </div>
   );
 };
