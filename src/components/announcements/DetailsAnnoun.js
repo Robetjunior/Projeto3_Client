@@ -18,7 +18,7 @@ const DetailsAnnoun = () => {
         console.error(err);
       }
     })();
-  }, []);
+  }, [id]);
 
   return (
     <div>
@@ -34,14 +34,14 @@ const DetailsAnnoun = () => {
 
       <Link
         className="btn btn-lg btn-primary"
-        to={`/transaction/create/${id}value=${15}`}
+        to={`/transaction/create/${id}?value=${15}`}
       >
         $15
       </Link>
 
       <Link
         className="btn btn-lg btn-primary"
-        to={`/transaction/create/${id}value=${20}`}
+        to={`/transaction/create/${id}?value=${20}`}
       >
         $20
       </Link>

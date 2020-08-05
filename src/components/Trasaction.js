@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory, useParams, useLocation } from "react-router-dom";
 import authApi from "../apis/auth";
 
 export default function Transaction() {
@@ -34,6 +34,12 @@ export default function Transaction() {
       console.error(err);
     }
   }
+
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+
+  let query = useQuery();
 
   return (
     <form onSubmit={handleSubmit}>
@@ -89,10 +95,10 @@ export default function Transaction() {
           name="value"
           id="authPhoneField"
           onChange={handleChange}
-          value={user.value}
+          value={`${query.get("value")}`}
         />
       </div>
-      <button type="subit" className="btn btn-lg btn-primary">
+      <button type="subit" classvalue="btn btn-lg btn-primary">
         Doar
       </button>
     </form>
