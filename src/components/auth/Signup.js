@@ -31,7 +31,7 @@ function Signup() {
 
   return (
     <div>
-      <h1>Signup</h1>
+      <h1 className="text-center">Signup</h1>
       <hr></hr>
       <FormSignup
         handleSubmit={handleSubmit}

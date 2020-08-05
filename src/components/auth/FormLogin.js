@@ -15,6 +15,7 @@ const FormLogin = (props) => {
   }
 
   return (
+    <div className="container-fluid mt-auto mr-auto d-flex justify-content-center align-items-center ">
     <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="exampleInputEmail1">Email</label>
@@ -38,10 +39,13 @@ const FormLogin = (props) => {
           value={props.user.password}
         />
       </div>
-      <button type="submit" className="btn btn-lg btn-primary">
+      <div className="d-flex justify-content-center">
+      <button type="subit" className=" btn btn-lg btn-primary p-3 mt-3">
         {props.buttonText}
       </button>
+      </div>
     </form>
+    </div>
   );
 };
 
