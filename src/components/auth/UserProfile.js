@@ -14,7 +14,6 @@ const UserProfile = (props) => {
        const response = await ongApi.get("/ong/profile");
 
        setUser(response.data[0])
-       console.log(response.data[0])
 
         history.push("/ong/profile");
       } catch (err) {
@@ -29,7 +28,7 @@ const UserProfile = (props) => {
       <h3>Email: {user.email}</h3>
       <h3>Address: {user.address}</h3>
       <h3>Phone: {user.phone}</h3>
-      <h3>Phone: {user.description}</h3>
+      <h3>Description: {user.description}</h3>
     </div>
   );
 };

@@ -10,6 +10,7 @@ import Signup from "./auth/Signup";
 import Login from "./auth/Login";
 import Logout from "./auth/Logout";
 import UserProfile from "./auth/UserProfile";
+import Transaction from "./Trasaction";
 import PrivateRoute from "./auth/PrivateRoute";
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path="/" exact component={HomePage} />
 
           <Route path="/signup" component={Signup} />
+
+          <Route path="/trasaction/create/:AnunId" component={Transaction} />
 
           <Route
             path="/login"
@@ -51,4 +54,5 @@ function App() {
     </BrowserRouter>
   );
 }
+
 export default App;
