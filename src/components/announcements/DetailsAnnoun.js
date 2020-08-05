@@ -23,30 +23,30 @@ const DetailsAnnoun = () => {
   return (
     <div>
       <h3>{announ.title}</h3>
-      <h3>Description: {announ.description}</h3>
+      <p>Description: {announ.description}</p>
+      <h5>Value total: ${announ.value},00</h5>
 
+      <h4>Donate!</h4>
       <Link
         className="btn btn-lg btn-primary"
-        to={`/transaction/create/${id}?value=${10}`}
+        to={`/transaction/create/${id}?value=${30}`}
       >
-        $10
+        $30
       </Link>
 
       <Link
         className="btn btn-lg btn-primary"
-        to={`/transaction/create/${id}?value=${15}`}
+        to={`/transaction/create/${id}?value=${50}`}
       >
-        $15
+        $50
       </Link>
 
       <Link
         className="btn btn-lg btn-primary"
-        to={`/transaction/create/${id}?value=${20}`}
+        to={`/transaction/create/${id}?value=${100}`}
       >
-        $20
+        $100
       </Link>
-      {/* Mandar valor da doacao E ID do anuncio para transaction.js */}
-      {/* <Link value={} */}
     </div>
   );
 };
