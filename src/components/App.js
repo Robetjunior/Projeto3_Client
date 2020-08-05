@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "../assets/styles/App.css";
-import Navbar from "./Navbar";
 
+import "../assets/styles/App.css";
+
+import Navbar from "./Navbar";
 import HomePage from "./HomePage";
 
 //SIGNUP/LOGIN/LOGOUT
@@ -10,12 +11,14 @@ import Signup from "./auth/Signup";
 import Login from "./auth/Login";
 import Logout from "./auth/Logout";
 import UserProfile from "./auth/UserProfile";
+import Transaction from "./Trasaction";
 import PrivateRoute from "./auth/PrivateRoute";
 import AboutUs from "./AboutUs";
 
 //ANNOUNCEMENTS
 import Search from "./announcements/Search";
 import CreateAnnouncement from "./announcements/CreateAnnouncement";
+import DetailsAnnoun from "./announcements/DetailsAnnoun";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -56,9 +59,14 @@ function App() {
             component={UserProfile}
             user={loggedInUser}
           />
+
+          <Route path="/announcement/:id" component={DetailsAnnoun} />
+
+          <Route path="/transaction/create/:AnunId" component={Transaction} />
         </Switch>
       </div>
     </BrowserRouter>
   );
 }
+
 export default App;

@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 
 import authApi from "../../apis/auth";
 
-
 import FormSignup from "./FormSignup";
 
 function Signup() {
@@ -25,7 +24,6 @@ function Signup() {
       history.push("/login");
     } catch (err) {
       console.error(err);
-
     }
   }
 
