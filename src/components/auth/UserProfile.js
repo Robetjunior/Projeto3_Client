@@ -11,7 +11,6 @@ const UserProfile = () => {
       try {
         const response = await ongApi.get("/ong/profile");
         setUser(response.data[0]);
-        console.log(response.data[0]);
         history.push("/ong/profile");
       } catch (err) {
         console.error(err);
