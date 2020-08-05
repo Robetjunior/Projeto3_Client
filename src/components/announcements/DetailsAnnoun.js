@@ -18,7 +18,7 @@ const DetailsAnnoun = () => {
         console.error(err);
       }
     })();
-  }, []);
+  }, [id]);
 
   return (
     <div>
@@ -27,29 +27,23 @@ const DetailsAnnoun = () => {
 
       <Link
         className="btn btn-lg btn-primary"
-        value={10}
-        announ={announ}
-        to={`/transaction/create/${id}`}
+        to={`/transaction/create/${id}?value=${10}`}
       >
-        10
+        $10
       </Link>
 
       <Link
         className="btn btn-lg btn-primary"
-        value={10}
-        announ={announ}
-        to={`/transaction/create/${id}`}
+        to={`/transaction/create/${id}?value=${15}`}
       >
-        15
+        $15
       </Link>
 
       <Link
         className="btn btn-lg btn-primary"
-        value={10}
-        announ={announ}
-        to={`/transaction/create/${id}`}
+        to={`/transaction/create/${id}?value=${20}`}
       >
-        20
+        $20
       </Link>
       {/* Mandar valor da doacao E ID do anuncio para transaction.js */}
       {/* <Link value={} */}

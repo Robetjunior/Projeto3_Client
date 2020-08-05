@@ -24,8 +24,6 @@ function Search() {
   function filterAnnoun(event) {
     const term = event.currentTarget.value;
     if (!term) {
-      console.log("CAIU NO IF");
-      console.log(announListBkp);
       return setAnnouncList([...announListBkp]);
     }
     const filtered = announList.filter((announ) => {
