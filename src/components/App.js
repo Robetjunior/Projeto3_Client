@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "../assets/styles/App.css";
-import Navbar from "./Navbar";
 
+import "../assets/styles/App.css";
+
+import Navbar from "./Navbar";
 import HomePage from "./HomePage";
 
 //SIGNUP/LOGIN/LOGOUT
@@ -12,6 +13,12 @@ import Logout from "./auth/Logout";
 import UserProfile from "./auth/UserProfile";
 import Transaction from "./Trasaction";
 import PrivateRoute from "./auth/PrivateRoute";
+import AboutUs from "./AboutUs";
+
+//ANNOUNCEMENTS
+import Search from "./announcements/Search";
+import CreateAnnouncement from "./announcements/CreateAnnouncement";
+import DetailsAnnoun from "./announcements/DetailsAnnoun";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -27,6 +34,7 @@ function App() {
       <div className="container-fluid w75 mt-5">
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/about" component={AboutUs} />
 
           <Route path="/signup" component={Signup} />
 
@@ -44,11 +52,17 @@ function App() {
             render={() => <Logout setUser={setLoggedInUser} />}
           />
 
+          <Route path="/create/announcement" component={CreateAnnouncement} />
+
+          <Route path="/announcements" component={Search} />
+
           <PrivateRoute
             path="/ong/profile"
             component={UserProfile}
             user={loggedInUser}
           />
+
+          <Route path="/announcement/:id" component={DetailsAnnoun} />
         </Switch>
       </div>
     </BrowserRouter>

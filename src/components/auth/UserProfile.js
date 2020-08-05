@@ -1,28 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
 import ongApi from "../../apis/ong";
 
-const UserProfile = (props) => {
+const UserProfile = () => {
   const history = useHistory();
-
   const [user, setUser] = useState({});
 
   useEffect(() => {
     (async function sendProfile() {
       try {
-       const response = await ongApi.get("/ong/profile");
-
-       setUser(response.data[0])
-
+        const response = await ongApi.get("/ong/profile");
+        setUser(response.data[0]);
         history.push("/ong/profile");
       } catch (err) {
         console.error(err);
       }
     })();
   }, []);
-
-  return(
+  return (
     <div>
       <h3>Name: {user.name}</h3>
       <h3>Email: {user.email}</h3>
@@ -32,5 +27,4 @@ const UserProfile = (props) => {
     </div>
   );
 };
-
 export default UserProfile;

@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 
 import authApi from "../../apis/auth";
 
-
 import FormSignup from "./FormSignup";
 
 function Signup() {
@@ -25,13 +24,12 @@ function Signup() {
       history.push("/login");
     } catch (err) {
       console.error(err);
-
     }
   }
 
   return (
     <div>
-      <h1>Signup</h1>
+      <h1 className="text-center">Signup</h1>
       <hr></hr>
       <FormSignup
         handleSubmit={handleSubmit}
