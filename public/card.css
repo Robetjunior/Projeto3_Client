@@ -68,3 +68,23 @@ body {
     -webkit-mask: url(#mask);
     mask: url(#mask);
   }
+
+ .c1{
+   background-color: orangered;
+   margin: 1rem;
+ }
+ 
+ .c2{
+   background-color: purple;
+   margin: 1rem;
+ }
+
+ .c3 {
+   background-color: lime;
+
+   margin: 1rem;
+ }
+
+ .c4{
+   background-color: orange;
+ }
