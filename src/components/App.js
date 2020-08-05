@@ -38,8 +38,6 @@ function App() {
 
           <Route path="/signup" component={Signup} />
 
-          <Route path="/trasaction/create/:AnunId" component={Transaction} />
-
           <Route
             path="/login"
             render={() => (
@@ -63,6 +61,8 @@ function App() {
           />
 
           <Route path="/announcement/:id" component={DetailsAnnoun} />
+
+          <Route path="/transaction/create/:AnunId" component={Transaction} />
         </Switch>
       </div>
     </BrowserRouter>
