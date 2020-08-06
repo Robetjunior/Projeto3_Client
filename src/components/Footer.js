@@ -1,14 +1,14 @@
-import React from "react"
+import React from "react";
 
-const Footer = () =>{
+const Footer = () => {
     return (
-        <footer className="footer">
-         
-         <h3 class="mt-5 mb-3 text-muted text-center">© Project-03 Developed by José Roberto, Eduardo Müller and Érick</h3> 
-          
-        </footer>
-      );
-    };
-
-
-export default Footer
+      <footer className="">
+        <h5 class="mt-5 mb-3 text-muted-color text-center">
+        © DonMake developed by José Roberto, Eduardo Müller and Érick
+        </h5>
+      </footer>
+    );
+  };
+  
+  export default Footer;
+  

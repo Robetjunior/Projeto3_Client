@@ -5,7 +5,7 @@ import "../assets/styles/App.css";
 
 import Navbar from "./Navbar";
 import HomePage from "./HomePage";
-import Footer from "./Footer"
+import Footer from "./Footer";
 
 //SIGNUP/LOGIN/LOGOUT
 import Signup from "./auth/Signup";
@@ -67,9 +67,9 @@ function App() {
 
           <Route path="/transaction/create/:AnunId" component={Transaction} />
 
-          
-          <Footer/>
         </Switch>
+
+        <Footer component={Footer} />
       </div>
     </BrowserRouter>
   );

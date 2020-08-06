@@ -14,7 +14,7 @@ function Signup() {
     password: "",
     address: "",
     phone: "",
-    cnpj: "",
+    cnpj: ""
   });
 
   async function handleSubmit(data) {

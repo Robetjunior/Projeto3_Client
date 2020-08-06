@@ -372,21 +372,30 @@
 
 
  /*Footer */
- .footer{
-  background:#014547;
-  color: #fff;
-  padding:10px;
+ footer{
+  background:transparent;
+
   display: block;
   align-items:center;
   justify-content: flex-start;
   bottom: 0;
   width: 100%;
-  height: 2.5rem; 
-  position: fixed!important;
+  
+  position: relative
+}
+.text-muted-color{
+  color: #fd4108 !important
 }
 
 
+
 /* Nav bar*/
+.navfixed{
+  position:fixed;
+  width: 100%;
+  background:transparent;
+  z-index:2
+}
 .nav-text-color{
   color: rgb(255, 94, 0) !important
 }
