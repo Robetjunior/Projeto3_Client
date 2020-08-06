@@ -28,9 +28,8 @@ function Login(props) {
   }
 
   return (
-    <div className="">
-      <h1 className="text-center">Login</h1>
-      <hr></hr>
+    <div className=" form-body">
+      
       <FormLogin
         handleSubmit={handleSubmit}
         setUser={setUser}
@@ -38,6 +37,7 @@ function Login(props) {
         buttonText="Login"
       />
     </div>
+    
   );
 }
 
