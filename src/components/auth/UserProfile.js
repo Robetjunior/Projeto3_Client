@@ -7,30 +7,35 @@ import ListAnnProfile from "./ListAnnProfile";
 
 const UserProfile = () => {
   const history = useHistory();
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState([]);
 
   useEffect(() => {
     (async function sendProfile() {
       try {
         const response = await ongApi.get("/ong/profile");
-        setUser(response.data[0]);
-        console.log(response.data[0]);
+
+        setUser([response.data])
+
         history.push("/ong/profile");
+
       } catch (err) {
         console.error(err);
       }
     })();
-  }, [history]);
+  }, []);
+
+console.log(user)
 
   return (
     <div>
-      <h3>Name: {user.name}</h3>
-      <h3>Email: {user.email}</h3>
-      <h3>Address: {user.address}</h3>
-      <h3>Phone: {user.phone}</h3>
-      <h3>Description: {user.description}</h3>
-
-      {/* <ListAnnProfile announ={[user.adId]} /> */}
+      <h1>User: {user.name}</h1>
+      {user.map((annun, i) => {
+        return (
+          <div key={i}>
+             <span>Title: {annun.title}</span>
+          </div>
+        )
+      })}
     </div>
   );
 };
