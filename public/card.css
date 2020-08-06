@@ -101,6 +101,14 @@
    color:darkblue
  }
 
+ .testemos{
+   background-image: url(./testemos.png);
+   color:white;
+   background-size: cover;
+   background-position: 0 0;
+   background-repeat: no-repeat;
+
+ }
 
  .img-rounded{
    border-radius: 25%;
@@ -252,12 +260,15 @@
  input {
    background-image: none;
    border: 0;
-   color: inherit;
+   color: white!important;
    font: inherit;
    margin: 0;
    outline: 0;
    padding: 0;
    transition: background-color 0.3s;
+ }
+ textarea{
+   color:white!important
  }
  
  input[type='submit'] {
@@ -409,3 +420,17 @@
 
 }
 
+
+
+
+/* Collaborator Img */
+
+.img-colaborator{
+  border-radius: 50%;
+  border: 0;
+  padding:1rem;
+  align-self: center;
+  width:28vw;
+  height:auto
+  
+}

@@ -127,14 +127,12 @@ function HomePage() {
   return (
     <div className="container-fluid ">
       <div className="row c4 w-100" >
-       <div className="c4 col-sm d-flex justify-content-center align-items-center ">
-        <div className=" w-100  ">
-          <h1 className="text-center">Donator</h1>
+       <div className="c4 col-sm -4 d-flex justify-content-center align-items-center ">
+        <div className=" w-100  ml-4">
+          <h1 className="text-center">Por que é importante doar?</h1>
           
-          <h2>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. 
-          </h2> 
+          <h4> No momento em que vivemos, muitas familias infelizmente perderam tudo que tinham e aqui na DonMake distribuimos os recursos captados para diversas campanhas.
+          </h4> 
             <div className="d-flex justify-content-center align-items-center">
             <Link className="btn btn-lg btn-primary " to="/announcements">
               <h1> Ajude</h1>
@@ -142,8 +140,8 @@ function HomePage() {
             </div>
         </div>
       </div>
-        <div className="w-75">
-        <div className="col-sm">
+        <div className="">
+        <div className="col-sm-8">
         <img  className="donate-img" src={DonateImg} alt="Donate"/>
         </div>
         </div>

@@ -6,28 +6,36 @@ import BoxDonate from "../box.jpg"
 import ConvertDonateImg from "../convertDonation.jpg"
 import MoneyDonateImg from "../moneyDonate.jpg"
 
+//Colaborators
+// import Colaborator3 from "../colaborador3.jpg"
+// import Colaborador2 from "../colaborador2.png"
+// import Colaborador1 from "../Colaborador1.jpeg"
+
 
 class AboutUs extends Component {
   render() {
     return(
       <div>
         <div className="container-fluid">
-          <div className="row">
-            <div className="col-sm c1">
+          <div className="row testemos">
+            <div className="col-sm  ">
+           
               <Fade left> 
-              <hr/>
-                <h1  className="text-center">Campanhas</h1>
+              
+                <h1  className="text-center">Sobre</h1>
                 <hr/>
               
         
                 <h2>
-                  Em nossa plataforma as doações realizadas terão seu valor convertido para os itens que as campanhas necessitam. Assim quando as campanhas alcançarem sua meta ou data final , o valor arrecadado  será convertido e redirecionado para as ONGS como : Alimentos, roupas, materiais basicos, etc.
+                A DonMake é uma plataforma desenvolvida para ajudar ONGs na capitação de recursos para suas campanhas.
+                  Em nossa plataforma as doações realizadas terão seu valor convertido para os itens que as campanhas necessitam, como : Alimentos, roupas, materiais basicos, etc.
                 </h2>
                 
                 
               </Fade>
             </div>
-            <div className="col-sm c2 ">
+            
+            <div className="col-sm  ">
               <Fade right>
                
               
@@ -75,48 +83,66 @@ class AboutUs extends Component {
               </Fade>
             </div>
           </div>
+         
         </div>
       </div>
      )
    }
 }
-// function AboutUs() {
-//   return (
-//     <div>
-    
-//       <h1>About Us</h1>
-//       <hr></hr>
-//       <p>
-//         It is a long established fact that a reader will be distracted by the
-//         readable content of a page when looking at its layout. The point of
-//         using Lorem Ipsum is that it has a more-or-less normal distribution of
-//         letters, as opposed to using 'Content here, content here', making it
-//         look like readable English.
-//       </p>
-//       <p>
-//         It is a long established fact that a reader will be distracted by the
-//         readable content of a page when looking at its layout. The point of
-//         using Lorem Ipsum is that it has a more-or-less normal distribution of
-//         letters, as opposed to using 'Content here, content here', making it
-//         look like readable English.
-//       </p>
-//       <p>
-//         It is a long established fact that a reader will be distracted by the
-//         readable content of a page when looking at its layout. The point of
-//         using Lorem Ipsum is that it has a more-or-less normal distribution of
-//         letters, as opposed to using 'Content here, content here', making it
-//         look like readable English.
-//       </p>
-//       <p>
-//         It is a long established fact that a reader will be distracted by the
-//         readable content of a page when looking at its layout. The point of
-//         using Lorem Ipsum is that it has a more-or-less normal distribution of
-//         letters, as opposed to using 'Content here, content here', making it
-//         look like readable English.
-//       </p>
-      
-//     </div>
-//   );
-// }
 
 export default AboutUs;
+
+
+
+// Adicionar ao final do projeto .
+
+
+{/* <div className="col-sm c3 ">
+              <Fade right> 
+            
+              <div className="d-flex justify-content-center">
+              <img className="img-colaborator" src={Colaborator3 } alt=" Colaborator 03"/> 
+              </div>
+                <h1 className="text-center">Eduardo</h1>
+              <hr></hr>
+
+              <ul>
+                <li>Estudante de Análise e Desenvolvimento de Sistemas</li>
+                <li>Trabalhei por 10 anos na área de Eletrônica e Automação. </li>
+                <li>Entrei nesse mundo de desenvolvimento e foi match na mesma hora.</li>
+                <li>Gamer nas horas vagas</li>
+                <li>Já fiz cursos para Game Design, escultura digital e manual.</li>
+              </ul>
+              
+
+              </Fade>
+            </div> */}
+
+          //   <div className="row">
+          //   <div className="col-sm c3">
+          //     <Fade top> 
+            
+               
+          //       <div className="d-flex justify-content-center">
+          //     <img className="img-rounded " src={Colaborator1} alt="Colaborator"/> 
+          //     </div>         
+          //     <h1  className="text-center">José Roberto</h1>
+          //     <hr></hr>
+          //     <p></p>
+                
+          //     </Fade>
+          //   </div>
+           
+          //   <div className="col-sm c3">
+          //     <Fade top>
+              
+          //     <div className="d-flex justify-content-center">
+          //     <img className="img-rounded " src={Colaborator2} alt="Colaborator"/> 
+          //     </div>     
+
+          //     <h1 className="text-center"></h1>          
+          //      <hr></hr>
+          //      <p>Todo valor arrecadado será utilizado para a compra necessária para as campanhas</p>        
+          //     </Fade>
+          //   </div>
+          // </div>

@@ -20,7 +20,7 @@ const Navbar = (props) => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul className="navbar-nav ml-auto  justify-content-endlex-row-reverse w-50 ">
+        <ul className="navbar-nav ml-auto  justify-content-endlex-row-reverse w-75">
           <li className="nav-item ml-auto ">
             <Link className="nav-link nav-text-color" to="/">
               <svg
@@ -86,7 +86,7 @@ const Navbar = (props) => {
                   d="M11 15V4h1v11h-1zm4.5-11H.5V3h15v1zM3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
                 />
               </svg>
-              My Announcements
+              Announc
             </Link>
           </li>
           ) : null}
