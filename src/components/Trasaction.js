@@ -6,12 +6,18 @@ export default function Transaction() {
   const { AnunId } = useParams();
   const history = useHistory();
 
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+
+  let query = useQuery();
+
   const [user, setUser] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
-    value: "",
+    value: query.get("value"),
     AnunId: AnunId,
   });
 
@@ -29,17 +35,11 @@ export default function Transaction() {
 
       setUser({ ...response });
 
-      history.push(`/Announcement/${AnunId}`);
+      history.push(`/announcement/${AnunId}`);
     } catch (err) {
       console.error(err);
     }
   }
-
-  function useQuery() {
-    return new URLSearchParams(useLocation().search);
-  }
-
-  let query = useQuery();
 
   return (
     <form onSubmit={handleSubmit}>
@@ -95,10 +95,10 @@ export default function Transaction() {
           name="value"
           id="authPhoneField"
           onChange={handleChange}
-          value={`${query.get("value")}`}
+          value={user.value}
         />
       </div>
-      <button type="subit" classvalue="btn btn-lg btn-primary">
+      <button type="submit" classvalue="btn btn-lg btn-primary">
         Doar
       </button>
     </form>

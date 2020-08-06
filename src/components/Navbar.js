@@ -21,7 +21,7 @@ const Navbar = (props) => {
       <div className="collapse navbar-collapse " id="navbarNavDropdown">
         <ul className="navbar-nav ml-auto  justify-content-endlex-row-reverse w-50">
           <li className="nav-item ml-auto">
-            <Link className="nav-link " to="/">
+            <Link className="nav-link" to="/">
               <svg
                 width="1em"
                 height="1em"
@@ -91,7 +91,6 @@ const Navbar = (props) => {
           ) : null}
           {props.loggedInUser._id ? (
             <div>
-            
               <span className="navbar-text mr-2">
                 <Link className="text-light" to="/ong/profile">
                   <svg
