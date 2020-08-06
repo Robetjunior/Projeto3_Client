@@ -66,6 +66,7 @@ function App() {
           <Route path="/announcement/:id" component={DetailsAnnoun} />
 
           <Route path="/transaction/create/:AnunId" component={Transaction} />
+
         </Switch>
 
         <Footer component={Footer} />
