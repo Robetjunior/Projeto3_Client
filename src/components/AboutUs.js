@@ -31,7 +31,7 @@ class AboutUs extends Component {
               <Fade right>
                
               
-                <img className="about-img" src={AboutImg}/> 
+                <img className="about-img" src={AboutImg} alt="About"/> 
                 <hr></hr>
               </Fade>
             </div>
@@ -42,7 +42,7 @@ class AboutUs extends Component {
             
                
                 <div className="d-flex justify-content-center">
-              <img className="img-rounded " src={MoneyDonateImg}/> 
+              <img className="img-rounded " src={MoneyDonateImg} alt=" Donate"/> 
               </div>         
               <h1  className="text-center">Valores</h1>
               <hr></hr>
@@ -54,7 +54,7 @@ class AboutUs extends Component {
               <Fade top> 
             
               <div className="d-flex justify-content-center">
-              <img className="img-rounded " src={BoxDonate}/> 
+              <img className="img-rounded " src={BoxDonate} alt=" DonateBox"/> 
               </div>
                 <h1 className="text-center">Amor</h1>
               <hr></hr>
@@ -66,7 +66,7 @@ class AboutUs extends Component {
               <Fade top>
               
               <div className="d-flex justify-content-center">
-              <img className="img-rounded " src={ConvertDonateImg} /> 
+              <img className="img-rounded " src={ConvertDonateImg} alt="Convert Donate"/> 
               </div>     
 
               <h1 className="text-center">Obrigado</h1>          
