@@ -28,49 +28,59 @@ const FormAnnouncement = (props) => {
   }
 
   return (
-      <div className="container-fluid mt-auto mr-auto d-flex justify-content-center align-items-center ">
-      
-    <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="exampleInputTitle">Title</label>
+    
+      <div className="container-fluid mt-auto mr-auto d-flex justify-content-center align-items-center form-body">
+
+      <div className="align ">
+
+      <h1 className="text-center">Announcement</h1>
+      <hr></hr>
+
+        <div className="grid">
+      <form  className="form login" onSubmit={handleSubmit}>
+      <div className="form__field">
+        <label htmlFor="exampleInputTitle"><i className="fa fa-user-circle-o" aria-hidden="true"></i></label>
         <input
           type="text"
-          className="form-control form-control-lg"
+          className="form-control form-control-lg form__input"
           id="announcementTitleField"
           name="title"
+          placeholder="Title"
           onChange={handleChange}
           value={props.announcement.title}
         />
       </div>
 
-      <div className="form-group">
-        <label htmlFor="exampleInputTitle">Value</label>
+      <div className="form__field">
+        <label htmlFor="exampleInputTitle"><i className="fa fa-user-circle-o" aria-hidden="true"></i></label>
         <input
           type="number"
           min="0"
-          className="form-control form-control-lg"
+          className="form-control form-control-lg form__input"
           id="announcementValueField"
           name="value"
+          placeholder="Value 12000"
           onChange={handleChange}
           value={props.announcement.value}
         />
       </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputOngId">Imagem</label>
+      <div className="form__field">
+        <label htmlFor="exampleInputOngId"><i className="fa fa-user-circle-o" aria-hidden="true"></i></label>
         <input
           type="file"
           className="form-control form-control-lg"
           id="imgPath"
           name="imgPath"
+          placeholder="Image"
           onChange={handleChange}
         />
       </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputDescription">Description</label>
+      <div className="form__field">
+        <label htmlFor="exampleInputDescription"><i className="fa fa-user-circle-o" aria-hidden="true"></i></label>
         <textarea
           rows="5"
           cols="50"
-          className="form-control form-control-lg"
+          className="form-control form-control-lg form__input"
           id="announcementDescriptionField"
           name="description"
           onChange={handleChange}
@@ -85,8 +95,13 @@ const FormAnnouncement = (props) => {
         {props.buttonText}
       </button>
       </div>
-    </form>
-    </div>
+      </form>
+    
+    </div></div>
+      </div>
+
+ 
+
   );
 };
 

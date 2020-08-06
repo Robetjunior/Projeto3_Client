@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LogoImg from "../logo.png"
 
 const Navbar = (props) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark  navfixed ">
       <Link className="navbar-brand" to="/">
-        Projeto 03
+       <img src={LogoImg}  alt="Logo"/> 
       </Link>
       <button
         className="navbar-toggler"
@@ -19,14 +20,14 @@ const Navbar = (props) => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul className="navbar-nav ml-auto  justify-content-endlex-row-reverse w-50">
-          <li className="nav-item ml-auto">
-            <Link className="nav-link" to="/">
+        <ul className="navbar-nav ml-auto  justify-content-endlex-row-reverse w-50 ">
+          <li className="nav-item ml-auto ">
+            <Link className="nav-link nav-text-color" to="/">
               <svg
-                width="1em"
-                height="1em"
+                width="2em"
+                height="2em"
                 viewBox="0 0 16 16"
-                className="bi bi-house-fill mr-1"
+                className="bi bi-house-fill mr-1 nav-svg"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -42,15 +43,62 @@ const Navbar = (props) => {
               Home
             </Link>
           </li>
+         
+          {props.loggedInUser._id ? (
+          <li className="nav-item ml-auto">
+            <Link className="nav-link nav-text-color" to="/create/announcement">
+              <svg
+                width="2em"
+                height="2em"
+                viewBox="0 0 16 16"
+                className="bi bi-info-circle mr-1 nav-svg"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                <circle cx="8" cy="4.5" r="1" />
+              </svg>
+              Create
+            </Link>
+          </li>
+          ) : null}
+          {props.loggedInUser._id ? (
+          <li className="nav-item ml-auto">
+            <Link className="nav-link nav-text-color " to="/announcements">
+              <svg
+                width="2em"
+                height="2em"
+                viewBox="0 0 16 16"
+                className="bi bi-layout-text-window  mr-1 nav-svg"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                />
+                <path
+                  fillRule="evenodd"
+                  d="M11 15V4h1v11h-1zm4.5-11H.5V3h15v1zM3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+              My Announcements
+            </Link>
+          </li>
+          ) : null}
           {props.loggedInUser._id ? (
             <div>
               <span className="navbar-text mr-2">
-                <Link className="text-light" to="/ong/profile">
-                  <svg
+                <Link className="text-light nav-text-color" to="/ong/profile">
+                  {/* <svg
                     width="1em"
                     height="1em"
                     viewBox="0 0 16 16"
-                    className="bi bi-envelope mr-1"
+                    className="bi bi-envelope nav-svg"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -58,7 +106,7 @@ const Navbar = (props) => {
                       fillRule="evenodd"
                       d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"
                     />
-                  </svg>
+                  </svg> */}
 
                   {props.loggedInUser.email}
                 </Link>
@@ -66,13 +114,13 @@ const Navbar = (props) => {
             </div>
           ) : (
             <React.Fragment>
-              <li className="nav-item ml-auto">
-                <Link className="nav-link" to="/login">
+              <li className="nav-item ml-auto ">
+                <Link className="nav-link nav-text-color" to="/login">
                   <svg
-                    width="1em"
-                    height="1em"
+                    width="2em"
+                    height="2em"
                     viewBox="0 0 16 16"
-                    className="bi bi-door-open mr-1"
+                    className="bi bi-door-open mr-1 nav-svg"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -89,13 +137,13 @@ const Navbar = (props) => {
                   Login
                 </Link>
               </li>
-              <li className="nav-item ml-auto">
-                <Link className="nav-link" to="/signup">
+              <li className="nav-item ml-auto nav-text-color">
+                <Link className="nav-link nav-text-color" to="/signup">
                   <svg
-                    width="1em"
-                    height="1em"
+                    width="2em"
+                    height="2em"
                     viewBox="0 0 16 16"
-                    className="bi bi-person-square mr-1"
+                    className="bi bi-person-square mr-1 nav-svg"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -113,60 +161,15 @@ const Navbar = (props) => {
               </li>
             </React.Fragment>
           )}
-          {props.loggedInUser._id ? (
-            <li className="nav-item ml-auto">
-              <Link className="nav-link" to="/create/announcement">
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  className="bi bi-info-circle mr-1"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                  />
-                  <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
-                  <circle cx="8" cy="4.5" r="1" />
-                </svg>
-                Create
-              </Link>
-            </li>
-          ) : null}
-          {props.loggedInUser._id ? (
-            <li className="nav-item ml-auto">
-              <Link className="nav-link " to="/announcements">
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  className="bi bi-layout-text-window mr-1"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    d="M11 15V4h1v11h-1zm4.5-11H.5V3h15v1zM3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
-                  />
-                </svg>
-                My Announcements
-              </Link>
-            </li>
-          ) : null}
+
         </ul>
         {props.loggedInUser._id ? (
-          <Link className="text-light" to="/logout">
+          <Link className="text-light nav-text-color" to="/logout">
             <svg
-              width="1em"
-              height="1em"
+              width="2em"
+              height="2em"
               viewBox="0 0 16 16"
-              className="bi bi-door-closed mr-1"
+              className="bi bi-door-closed mr-1 nav-svg"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >

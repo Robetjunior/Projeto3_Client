@@ -5,6 +5,7 @@ import "../assets/styles/App.css";
 
 import Navbar from "./Navbar";
 import HomePage from "./HomePage";
+import Footer from "./Footer";
 
 //SIGNUP/LOGIN/LOGOUT
 import Signup from "./auth/Signup";
@@ -32,7 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar loggedInUser={loggedInUser} />
-      <div className="container-fluid w75 mt-5">
+      <div className="container-fluid body-form">
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/about" component={AboutUs} />
@@ -65,7 +66,10 @@ function App() {
           <Route path="/announcement/:id" component={DetailsAnnoun} />
 
           <Route path="/transaction/create/:AnunId" component={Transaction} />
+
         </Switch>
+
+        <Footer component={Footer} />
       </div>
     </BrowserRouter>
   );

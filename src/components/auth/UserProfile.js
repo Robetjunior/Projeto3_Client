@@ -1,41 +1,47 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 
 import ongApi from "../../apis/ong";
 
-import ListAnnProfile from "./ListAnnProfile";
+// import ListAnnProfile from "./ListAnnProfile";
 
 const UserProfile = () => {
-  const history = useHistory();
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    address: "",
+    adId: [],
+  });
 
   useEffect(() => {
     (async function sendProfile() {
       try {
         const response = await ongApi.get("/ong/profile");
 
-        setUser([response.data])
-
-        history.push("/ong/profile");
-
+        setUser({ ...response.data });
+        console.log(response.data);
       } catch (err) {
         console.error(err);
       }
     })();
   }, []);
 
-console.log(user)
-
   return (
     <div>
       <h1>User: {user.name}</h1>
-      {user.map((annun, i) => {
+      <p>Email: {user.email}</p>
+      <p>Phone: {user.phone}</p>
+      <p>{user.address}</p>
+
+      {user.adId.map((annun, i) => {
         return (
           <div key={i}>
-             <span>Title: {annun.title}</span>
+            <img src={annun.imgPath} alt="Announcement" />
+            <h1>Title: {annun.title}</h1>
+            <p> Value: ${annun.value},00</p>
           </div>
-        )
+        );
       })}
+      {/* <ListAnnProfile user={user} /> */}
     </div>
   );
 };
