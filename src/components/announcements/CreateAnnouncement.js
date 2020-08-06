@@ -26,9 +26,8 @@ function CreateAnnouncement() {
   }
 
   return (
-    <div className="container-fluid ">
-      <h1 className="text-center">Announcement</h1>
-      <hr></hr>
+    <div className="container-fluid form-body">
+      
 
       <FormAnnouncement
         handleSubmit={handleSubmit}

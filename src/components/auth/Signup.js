@@ -28,9 +28,8 @@ function Signup() {
   }
 
   return (
-    <div>
-      <h1 className="text-center">Signup</h1>
-      <hr></hr>
+    <div className="form-body">
+     
       <FormSignup
         handleSubmit={handleSubmit}
         setUser={setUser}
