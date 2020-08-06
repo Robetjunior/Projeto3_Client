@@ -1,8 +1,8 @@
-import React ,{Component}  from "react";
+import React   from "react";
 import { Link } from "react-router-dom";
 import AboutUs from "./AboutUs"
 import DonateImg from "../donateBox.jpg"
-import Footer from "./Footer"
+
 // class HomePage extends Component {
 //   constructor() {
 //     super();
@@ -144,7 +144,7 @@ function HomePage() {
       </div>
         <div className="w-75">
         <div className="col-sm">
-        <img  className="donate-img" src={DonateImg}/>
+        <img  className="donate-img" src={DonateImg} alt="Donate"/>
         </div>
         </div>
         </div>

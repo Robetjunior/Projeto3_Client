@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 
 function ListAnnouncement(props) {
   return (
-    <div className="">
+    <div className="container-fluid">
+    <div className="row d-flex justify-content-around ">
       {props.announList.map((ann, i) => {
         return (
-          <div key={i}>
-          <div className="row">
-          <div className="col-sm c3 ">
+       
+         
+          <div className="col-sm-5 m-4 bkg-color" key={i}>
               <Fade top>
               
               <div className="d-flex justify-content-center">
@@ -24,14 +25,14 @@ function ListAnnouncement(props) {
                <hr></hr>
           
                       <p>{ann.description}</p>
-                      <p>Value: ${ann.value},00</p>
+                      <p>Value: $ {ann.value},00</p>
               </Fade>
             </div>
           
-          </div>
-          </div>
+          
         );
       })}
+    </div>
     </div>
   );
 }

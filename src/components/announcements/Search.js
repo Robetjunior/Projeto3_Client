@@ -34,12 +34,14 @@ function Search() {
   }
 
   return (
-    <div className="input-group input-group-lg mb-4">
+    <div className="input-group input-group-lg mb-4 d-flex justify-content-center" >
       <div className="w-50">
-        <h1>
-          <svg
-            width="1em"
-            height="1em"
+       
+          <div className="form__field">
+        <label>
+      <svg
+            width="2.5em"
+            height="2.5em"
             viewBox="0 0 16 16"
             className="bi bi-search"
             fill="currentColor"
@@ -54,8 +56,7 @@ function Search() {
               d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
             />
           </svg>
-        </h1>
-
+          </label>
         <input
           type="text"
           className="form-control form-control-lg"
@@ -63,7 +64,7 @@ function Search() {
           onKeyUp={filterAnnoun}
         />
       </div>
-
+        </div>
       <div className="w-100">
         <ListAnnouncement announList={announList} />
       </div>
