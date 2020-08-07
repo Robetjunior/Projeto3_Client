@@ -127,8 +127,8 @@
  :root {
    --htmlFontSize: 100%;
  
-   --bodyBackgroundColor: #2c3338;
-   --bodyColor: var(--baseColor);
+   --bodyBackgroundColor: #464545;
+   --bodyColor: rgb(255, 102, 0);
    --bodyFontFamily: 'Open Sans';
    --bodyFontFamilyFallback: sans-serif;
    --bodyFontSize: 0.875rem;
@@ -312,6 +312,7 @@
  
  .text--center {
    text-align: center;
+   color:rgb(100, 99, 99) !important
  }
 
 
@@ -339,7 +340,11 @@
   z-index:2
 }
 .nav-text-color{
-  color: rgb(255, 94, 0) !important
+  color: rgb(82, 82, 82) !important;
+  font-size: 1.5rem;
+}
+.nav-text-color:hover{
+  color: rgb(255, 254, 254) !important
 }
 .nav-svg{
   color: #fd4108 !important
@@ -380,6 +385,23 @@
   padding: 1rem;
   color:white;
  }
+.button-new-model{
+  background-image: linear-gradient(
+   115deg,
+   rgba(32, 19, 216, 0.5),
+   rgba(33, 241, 61, 0.719)
+  );
+   border-radius: 2rem;
+   box-shadow: 1px 1px rgba(8, 26, 192, 0.5)
+}
+.button-new-model:hover{
+  background-image: linear-gradient(
+   115deg,
+   rgba(31, 0, 88, 0.6),
+   rgba(0, 85, 52, 0.6));
+   box-shadow: 2px 2px rgba(255, 255, 255, 0);
+   border-radius: 2rem;
+}
 
 .card-donate{
   box-shadow: 4px 4px #35353538;
@@ -398,4 +420,15 @@
 .form-shadow{
   background-color: rgba(19, 19, 19, 0.486);
   border-radius: 2rem;
+}
+
+.hover-button:hover
+{
+  background-color: rgba(36, 36, 36, 0.705);
+  padding: .5rem ;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+
 }

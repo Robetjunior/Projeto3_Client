@@ -18,7 +18,7 @@ function CreateAnnouncement() {
     try {
       /////////// VERIFICAR ATRIBUTO ONGID ESTA VINDO VAZIO ///////////////////////////
       const result = await announcementApi.post("/create", data);
-      history.push("/ong/profile");
+      history.push("ong/profile");
       /////////// VERIFICAR ATRIBUTO ONGID ESTA VINDO VAZIO ///////////////////////////
     } catch (err) {
       console.error(err);
@@ -35,18 +35,7 @@ function CreateAnnouncement() {
         announcement={announcement}
         buttonText="Create"
       />
-      {/* <div className="d-flex justify-content-start m-2">
-                <img 
-                className="pictures"
-                src={props.imgPath}
-                alt={`This is the ${props.title} announcement`}
-                />
-            </div>
-        
-            <div>
-                <strong>{props.title}</strong>
-                <span className="d-block">{props.description}</span>
-            </div> */}
+     
     </div>
   );
 }

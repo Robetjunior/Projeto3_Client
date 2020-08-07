@@ -14,7 +14,7 @@ function HomePage() {
           <h4 className="text-donate"> No momento em que vivemos, muitas familias infelizmente perderam tudo que tinham e com apenas um clique podemos ajudar elas nessa hora.
           </h4> 
             <div className="d-flex justify-content-center align-items-center">
-            <Link className="btn btn-lg btn-primary " to="/announcements">
+            <Link className="btn btn-lg btn-primary button-new-model" to="/announcements">
               <h1 className="text-donate"> Ajude-os</h1>
             </Link>
             </div>

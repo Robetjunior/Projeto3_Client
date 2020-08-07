@@ -17,8 +17,8 @@ class AboutUs extends Component {
     return(
       <div>
         <div className="container-fluid">
-          <div className="row color-gradient2 ">
-            <div className="col-sm  ">
+          <div className="row   ">
+            <div className="col-sm  c4">
            
               <Fade left> 
               
@@ -26,10 +26,10 @@ class AboutUs extends Component {
                 <hr className="card-donate"></hr>
               
         
-                <h2 className="text-donate">
+                <h4 className="text-donate">
                 A DonMake é uma plataforma desenvolvida para ajudar ONGs na capitação de recursos para suas campanhas.
                   Em nossa plataforma as doações realizadas terão seu valor convertido para os itens que as campanhas necessitam, como : Alimentos, roupas, materiais basicos, etc.
-                </h2>
+                </h4>
                 
                 
               </Fade>
@@ -44,7 +44,7 @@ class AboutUs extends Component {
               </Fade>
             </div>
           </div>
-          <div className="row color-gradient">
+          <div className="row c4">
             <div className="col-sm card-donate">
               <Fade top> 
             

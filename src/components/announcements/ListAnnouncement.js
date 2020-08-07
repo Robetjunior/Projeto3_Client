@@ -13,7 +13,7 @@ function ListAnnouncement(props) {
         return (
        
          
-          <div className="col-sm-5 m-4 bkg-color card-donate" key={i}>
+          <div className="col-sm-5 m-4 c4 card-donate" key={i}>
               <Fade top>
               
               <div className="d-flex justify-content-center ">

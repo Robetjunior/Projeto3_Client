@@ -70,6 +70,7 @@ const FormAnnouncement = (props) => {
           className="form-control form-control-lg form__input"
           id="announcementDescriptionField"
           name="description"
+          placeholder="Enter description here ..."
           onChange={handleChange}
           value={props.announcement.description}
         >
