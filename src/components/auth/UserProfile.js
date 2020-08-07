@@ -30,14 +30,14 @@ const UserProfile = () => {
       <h1>User: {user.name}</h1>
       <p>Email: {user.email}</p>
       <p>Phone: {user.phone}</p>
-      <p>{user.address}</p>
+      <p>Addres: {user.address}</p>
 
       {user.adId.map((annun, i) => {
         return (
           <div key={i}>
             <img src={annun.imgPath} alt="Announcement" />
             <h1>Title: {annun.title}</h1>
-            <p> Value: ${annun.value},00</p>
+            <p> Value: $  {annun.value},00</p>
           </div>
         );
       })}

@@ -17,16 +17,16 @@ class AboutUs extends Component {
     return(
       <div>
         <div className="container-fluid">
-          <div className="row testemos">
+          <div className="row color-gradient2 ">
             <div className="col-sm  ">
            
               <Fade left> 
               
-                <h1  className="text-center">Sobre</h1>
-                <hr/>
+                <h1  className="text-center text-donate">Sobre</h1>
+                <hr className="card-donate"></hr>
               
         
-                <h2>
+                <h2 className="text-donate">
                 A DonMake é uma plataforma desenvolvida para ajudar ONGs na capitação de recursos para suas campanhas.
                   Em nossa plataforma as doações realizadas terão seu valor convertido para os itens que as campanhas necessitam, como : Alimentos, roupas, materiais basicos, etc.
                 </h2>
@@ -40,46 +40,46 @@ class AboutUs extends Component {
                
               
                 <img className="about-img" src={AboutImg} alt="About"/> 
-                <hr></hr>
+              
               </Fade>
             </div>
           </div>
-          <div className="row">
-            <div className="col-sm c3">
+          <div className="row color-gradient">
+            <div className="col-sm card-donate">
               <Fade top> 
             
                
                 <div className="d-flex justify-content-center">
               <img className="img-rounded " src={MoneyDonateImg} alt=" Donate"/> 
               </div>         
-              <h1  className="text-center">Valores</h1>
-              <hr></hr>
-              <p>Com apenas um clique você pode realizar sua doação.</p>
+              <h1  className="text-center text-donate">Valores</h1>
+              <hr className="card-donate"></hr>
+              <p className="text-donate-sm">Com apenas um clique você pode realizar sua doação.</p>
                 
               </Fade>
             </div>
-            <div className="col-sm c3 ">
+            <div className="col-sm card-donate">
               <Fade top> 
             
               <div className="d-flex justify-content-center">
               <img className="img-rounded " src={BoxDonate} alt=" DonateBox"/> 
               </div>
-                <h1 className="text-center">Amor</h1>
-              <hr></hr>
-              <p>Doar é um gesto de amor ao próximo, saiba que muitas vidas serão mudadas com esse gesto.</p>
+                <h1 className="text-center text-donate">Amor</h1>
+              <hr className="card-donate"></hr>
+              <p className="text-donate-sm">Doar é um gesto de amor ao próximo, saiba que muitas vidas serão mudadas com esse gesto.</p>
 
               </Fade>
             </div>
-            <div className="col-sm c3">
+            <div className="col-sm card-donate ">
               <Fade top>
               
               <div className="d-flex justify-content-center">
               <img className="img-rounded " src={ConvertDonateImg} alt="Convert Donate"/> 
               </div>     
 
-              <h1 className="text-center">Obrigado</h1>          
-               <hr></hr>
-               <p>Todo valor arrecadado será utilizado para a compra necessária para as campanhas</p>        
+              <h1 className="text-center text-donate ">Obrigado</h1>          
+              <hr className="card-donate"></hr>
+               <p className="text-donate-sm">Todo valor arrecadado será utilizado para a compra necessária para as campanhas</p>        
               </Fade>
             </div>
           </div>

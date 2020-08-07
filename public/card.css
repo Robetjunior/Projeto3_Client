@@ -328,11 +328,13 @@
  }
  
  .login label {
-   background-color: var(--loginLabelBackgroundColor);
-   border-bottom-right-radius: 0;
-   border-top-right-radius: 0;
-   padding-left: 1.25rem;
-   padding-right: 1.25rem;
+  background-color: var(--loginLabelBackgroundColor);
+    border-bottom-left-radius: 10%;
+    border-top-left-radius: 10%;
+    padding: 1.25rem;
+    padding-right: 1.25rem;
+    height: 3rem;
+    width:3rem
  }
  
  .login input[type='password'],
@@ -340,9 +342,11 @@
  .login input[type='file'],
  .login input[type='text'],
  .login textarea {
-   background-color: var(--loginInputBackgroundColor);
-   border-bottom-left-radius: 0;
-   border-top-left-radius: 0;
+  background-color: var(--loginInputBackgroundColor);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  height: 3rem;
+  border:none
  }
  
  .login input[type='password']:focus,
@@ -390,13 +394,11 @@
  /*Footer */
  footer{
   background:transparent;
-
   display: block;
   align-items:center;
   justify-content: flex-start;
   bottom: 0;
   width: 100%;
-  
   position: relative
 }
 .text-muted-color{
@@ -433,4 +435,43 @@
   width:28vw;
   height:auto
   
+}
+
+
+/* Layout Colors */
+
+.color-gradient{
+ background-image: linear-gradient(
+  115deg,
+  rgba(204, 85, 16, 0.5),
+  rgba(190, 28, 190, 0.5)); 
+ padding: 1rem;
+ color:white;
+}
+.color-gradient2{
+  background-image: linear-gradient(
+   115deg,
+   rgba(204, 85, 16, 0.5),
+   rgba(190, 28, 190, 0.5)); 
+  padding: 1rem;
+  color:white;
+ }
+
+.card-donate{
+  box-shadow: 4px 4px #35353538;
+  border: 1px solid rgba(190, 190, 190, 0.26);
+}
+
+.text-donate {
+  text-shadow: 4px 4px #35353538;
+}
+
+.text-donate-sm{
+  text-shadow: 2px 2px  #35353538;
+}
+
+
+.form-shadow{
+  background-color: rgba(19, 19, 19, 0.486);
+  border-radius: 2rem;
 }

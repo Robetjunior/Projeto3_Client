@@ -3,6 +3,8 @@ import React from "react";
 import Fade from "react-reveal/Fade"
 import { Link } from "react-router-dom";
 
+import ImageTest from "../../donations.jpg"
+
 function ListAnnouncement(props) {
   return (
     <div className="container-fluid">
@@ -16,7 +18,7 @@ function ListAnnouncement(props) {
               
               <div className="d-flex justify-content-center">
               <Link to={`/announcement/${ann._id}`}>
-              <img src={ann.imgPath} alt="Announcement" />  
+              <img src={ImageTest} alt="Announcement" />  
               </Link>
         
               </div>     
