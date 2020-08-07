@@ -30,7 +30,7 @@ const UserProfile = () => {
   }, []);
 
   return (
-    <div className="container-fluid row">
+    <div className="row d-flex justify-content-around ">
 
       <div className="col-sm-4 info-profile">
         <h1>Seja Bem-vindo: {user.name}</h1>
@@ -45,7 +45,7 @@ const UserProfile = () => {
         return (
           <div key={i} className="card">
             <div>
-               <img src={annun.imgPath} className="img" alt="Announcement" />
+               <img classname="image-size-control" src={annun.imgPath} className="img" alt="Announcement" />
             </div>
             <div className="card-body">
              <h1 classNAme="card-title">{annun.title}</h1>

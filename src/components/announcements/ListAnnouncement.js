@@ -14,7 +14,7 @@ function ListAnnouncement(props) {
               <Fade top>
                 <div className="d-flex justify-content-center ">
                   <Link to={`/announcement/${ann._id}`}>
-                    <img src={ann.imgPath} alt="Announcement" />
+                    <img className="image-size-control" src={ann.imgPath} alt="Announcement" />
                   </Link>
                 </div>
 

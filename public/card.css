@@ -432,3 +432,9 @@
 
 
 }
+
+.image-size-control{
+  min-width: 25vw;
+  height: auto;
+  max-width: 50vw;
+}
