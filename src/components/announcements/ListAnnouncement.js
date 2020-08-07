@@ -2,8 +2,6 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 
-import ImageTest from "../../donations.jpg";
-
 function ListAnnouncement(props) {
   return (
     <div className="container-fluid">
