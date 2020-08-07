@@ -50,6 +50,7 @@ const UserProfile = () => {
             <div className="card-body">
              <h1 classNAme="card-title">{annun.title}</h1>
               <span className="card-text"><strong>Valor: $</strong>{annun.value},00</span>
+              <Link className="an" to={`/announcement/${annun._id}`}>Ver Announcement</Link>
             </div>
 
           </div>
