@@ -30,13 +30,16 @@ const UserProfile = () => {
   }, []);
 
   return (
-    <div>
-      <div className="info-profile">
+    <div className="container-fluid row">
+
+      <div className="col-sm-4 info-profile">
         <h1>Seja Bem-vindo: {user.name}</h1>
         <span><strong>Email: </strong>{user.email}</span><br></br>
         <span><strong>Phone: </strong>{user.phone}</span><br></br>
         <span><strong>Endereço: </strong>{user.address}</span>
       </div>
+      <div className="col-sm-7">
+
       <h1 className="title-campanhas">Suas campanhas: </h1>
       {user.adId.map((annun, i) => {
         return (
@@ -48,9 +51,12 @@ const UserProfile = () => {
              <h1 classNAme="card-title">{annun.title}</h1>
               <span className="card-text"><strong>Valor: $</strong>{annun.value},00</span>
             </div>
+
           </div>
+          
         );
       })}
+      </div>
     </div>
   );
 };

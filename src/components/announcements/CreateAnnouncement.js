@@ -23,7 +23,9 @@ function CreateAnnouncement() {
   async function handleSubmit(data) {
     try {
       const result = await announcementApi.post("/create", data);
+
       history.push("/ong/profile");
+
     } catch (err) {
       console.error(err);
     }
@@ -55,18 +57,7 @@ function CreateAnnouncement() {
         handleFileUpload={handleFileUpload}
         buttonText="Create"
       />
-      {/* <div className="d-flex justify-content-start m-2">
-                <img 
-                className="pictures"
-                src={props.imgPath}
-                alt={`This is the ${props.title} announcement`}
-                />
-            </div>
-        
-            <div>
-                <strong>{props.title}</strong>
-                <span className="d-block">{props.description}</span>
-            </div> */}
+     
     </div>
   );
 }
