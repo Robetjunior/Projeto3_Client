@@ -78,6 +78,7 @@ export default function Transaction() {
           className="form-control form-control-lg form__input"
           name="email"
           id="authPasswordField"
+          placeholder="Example@e-mail.com"
           onChange={handleChange}
           value={user.email}
         />
@@ -89,6 +90,7 @@ export default function Transaction() {
           className="form-control form-control-lg form__input"
           name="phone"
           id="authAddressField"
+          placeholder="Phone "
           onChange={handleChange}
           value={user.phone}
         />
@@ -100,6 +102,7 @@ export default function Transaction() {
           className="form-control form-control-lg form__input"
           name="value"
           id="authPhoneField"
+          
           onChange={handleChange}
           value={user.value}
         />

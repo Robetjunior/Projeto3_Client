@@ -208,6 +208,7 @@
  .form input[type='number'],
  .form input[type='file '],
  .form input[type='submit'],
+ .form input[type='value'],
  .form textarea {
    width: 100%;
  }
@@ -246,6 +247,7 @@
  .login input[type='password'],
  .login input[type='number'],
  .login input[type='submit'],
+ .login input[type='value'],
  .login textarea {
    border-radius: var(--loginBorderRadus);
    padding: 1rem;
@@ -265,6 +267,7 @@
  .login input[type='number'],
  .login input[type='file'],
  .login input[type='text'],
+ .login input[type='value'],
  .login textarea {
   background-color: var(--loginInputBackgroundColor);
   border-bottom-left-radius: 0;
@@ -281,6 +284,8 @@
  .login input[type='file']:hover
  .login input[type='text']:focus,
  .login input[type='text']:hover ,
+ .login input[type='value']:focus,
+ .login input[type='value']:hover ,
  .login textarea:focus,
  .login textarea:hover{
    background-color: var(--loginInputHoverBackgroundColor);
@@ -392,7 +397,11 @@
    rgba(33, 241, 61, 0.719)
   );
    border-radius: 2rem;
-   box-shadow: 1px 1px rgba(8, 26, 192, 0.5)
+   box-shadow: 1px 1px rgba(8, 26, 192, 0.5);
+  
+}
+.no-underline{
+  text-decoration: none!important;
 }
 .button-new-model:hover{
   background-image: linear-gradient(

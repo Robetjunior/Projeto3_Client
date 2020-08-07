@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Fade from "react-reveal/Fade";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import ongApi from "../../apis/ong";
 
@@ -51,9 +51,11 @@ const UserProfile = () => {
                <img src={annun.imgPath} className="img image-control-profile" alt="Announcement" />
             </div>
             <div className="card-body">
-             <h1 className="card-title">{annun.title}</h1>
-             <p className="card-text"><strong>Descrição $</strong>{annun.description},00</p>
-              <span className="card-text"><strong>Campanha: $</strong>{annun.value},00</span>
+
+             <h1 classNAme="card-title">{annun.title}</h1>
+              <span className="card-text"><strong>Valor: $</strong>{annun.value},00</span>
+              <Link className="an" to={`/announcement/${annun._id}`}>Ver Announcement</Link>
+
             </div>
             
          </div>

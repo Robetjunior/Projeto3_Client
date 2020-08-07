@@ -47,7 +47,7 @@ const Navbar = (props) => {
           {props.loggedInUser._id ? (
            <li className="nav-item ml-auto">
               <span className="navbar-text mr-2">
-                <Link className="text-light nav-text-color  hover-button " to="/ong/profile">
+                <Link className="text-light nav-text-color  hover-button no-underline" to="/ong/profile">
                 
 
                   Profile

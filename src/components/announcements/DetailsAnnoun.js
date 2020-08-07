@@ -20,21 +20,30 @@ const DetailsAnnoun = () => {
   }, [id]);
 
   return (
-    <div className="  container-fluid mt-auto mr-auto d-flex justify-content-center align-items-center form-body">
-      <div className="align p-5 form-shadow w-50">
-        <h1 className="text-center">{announ.title}</h1>
-        <hr></hr>
-        <img className="img image-control-detail " src={announ.imgPath} alt="Announcement" />
-        <div className="form__field d-flex justify-content-center align-items-center">
-          <p>Description: {announ.description}</p>
+    <div className="  container-fluid mt-auto mr-auto mt-5 p-5 justify-content-center align-items-center form-body">
+      <div className="row">
+        <div className="col-sm-7 img-details">
+  
+          <img className="image-control-detail" src={announ.imgPath} alt="Announcement" />
         </div>
-        <div className="form__field d-flex justify-content-center align-items-center">
-          <h5>Value total: ${announ.value},00</h5>
+   
+        <div className="col-sm-4 ">
+        <h1 className="text-center"> {announ.title} </h1>
+          <hr></hr>
+           <h5>Meta : ${announ.value},00</h5>
+      
+          <p>
+            <strong>Descrição: </strong>
+            {announ.description}
+          </p>
+            
         </div>
-        <div className="form__field d-flex justify-content-center align-items-center">
+    </div>
+    <div className="col-sm-12"> 
+    <div className="form__field d-flex justify-content-center align-items-center">
           <h4>Donate!</h4>
         </div>
-        <div>
+        <div className=" d-flex justify-content-center align-items-center">
           <Link
             className="btn btn-lg btn-primary m-3"
             to={`/transaction/create/${id}?value=${30}`}
@@ -63,8 +72,14 @@ const DetailsAnnoun = () => {
           </Link>
         </div>
       </div>
-    </div>
+      
+      </div>
+   
   );
 };
 
 export default DetailsAnnoun;
+
+    
+     
+ 
