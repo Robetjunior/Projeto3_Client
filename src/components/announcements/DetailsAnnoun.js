@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom"
 
+import '../../assets/styles/details.css'
+
 import announApi from "../../apis/announcement";
 
 const DetailsAnnoun = () => {
@@ -20,11 +22,12 @@ const DetailsAnnoun = () => {
   }, [id]);
 
   return (
-    <div>
-      <h3>{announ.title}</h3>
-      <p>Description: {announ.description}</p>
-      <h5>Value total: ${announ.value},00</h5>
-      <h4>Donate!</h4>
+    <div className="details">
+      <img src={announ.imgPath} />
+        <h3>{announ.title}</h3> 
+        <p>Description: {announ.description}</p>
+        <h5>Value total: ${announ.value},00</h5>
+        <h4>Donate!</h4>
       <Link
         className="btn btn-lg btn-primary"
         to={`/transaction/create/${id}?value=${30}`}
