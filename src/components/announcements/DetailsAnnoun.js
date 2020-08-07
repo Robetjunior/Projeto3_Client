@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-import '../../assets/styles/details.css'
+import "../../assets/styles/details.css";
 
 import announApi from "../../apis/announcement";
 
@@ -24,35 +24,29 @@ const DetailsAnnoun = () => {
   return (
     <div className="details">
       <div className="img-details">
-          <img src={announ.imgPath} />
+        <img src={announ.imgPath} alt="Announcement" />
       </div>
       <div className="title">
-        <h3>{announ.title}</h3> 
-        <p><strong>Descrição: </strong>{announ.description}</p>
+        <h3>{announ.title}</h3>
+        <p>
+          <strong>Descrição: </strong>
+          {announ.description}
+        </p>
       </div>
-        <h4>Donate!</h4>
-      <Link
-        className="btn"
-        to={`/transaction/create/${id}?value=${30}`}
-      >
+      <h4>Donate!</h4>
+      <Link className="btn" to={`/transaction/create/${id}?value=${30}`}>
         $30
       </Link>
 
-      <Link
-        className="btn"
-        to={`/transaction/create/${id}?value=${50}`}
-      >
+      <Link className="btn" to={`/transaction/create/${id}?value=${50}`}>
         $50
       </Link>
 
-      <Link
-        className="btn"
-        to={`/transaction/create/${id}?value=${100}`}
-      >
+      <Link className="btn" to={`/transaction/create/${id}?value=${100}`}>
         $100
       </Link>
       <div className="meta">
-            <h5>Meta : ${announ.value},00</h5>
+        <h5>Meta : ${announ.value},00</h5>
       </div>
     </div>
   );

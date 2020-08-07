@@ -25,7 +25,6 @@ function CreateAnnouncement() {
       const result = await announcementApi.post("/create", data);
 
       history.push("/ong/profile");
-
     } catch (err) {
       console.error(err);
     }
@@ -57,7 +56,6 @@ function CreateAnnouncement() {
         handleFileUpload={handleFileUpload}
         buttonText="Create"
       />
-     
     </div>
   );
 }
