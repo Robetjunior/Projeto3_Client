@@ -26,7 +26,7 @@ class AboutUs extends Component {
                 <hr className="card-donate"></hr>
               
         
-                <h4 className="text-donate">
+                <h4 className="text-donate ml-3">
                 A DonMake é uma plataforma desenvolvida para ajudar ONGs na capitação de recursos para suas campanhas.
                   Em nossa plataforma as doações realizadas terão seu valor convertido para os itens que as campanhas necessitam, como : Alimentos, roupas, materiais basicos, etc.
                 </h4>

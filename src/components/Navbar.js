@@ -47,10 +47,10 @@ const Navbar = (props) => {
           {props.loggedInUser._id ? (
            <li className="nav-item ml-auto">
               <span className="navbar-text mr-2">
-                <Link className="text-light nav-text-color  hover-button " to="/ong/profile">
+                <Link className="text-light nav-text-color  hover-button no-underline" to="/ong/profile">
                 
 
-                  {props.loggedInUser.email}
+                  Profile
                 </Link>
               </span>
               </li>
@@ -71,13 +71,15 @@ const Navbar = (props) => {
             </React.Fragment>
           )}
 
-        </ul>
+       
         {props.loggedInUser._id ? (
           <Link className="nav-link nav-text-color hover-button " to="/logout">
            
             Logout
           </Link>
+      
         ) : null}
+        </ul>
       </div>
     </nav>
   );
