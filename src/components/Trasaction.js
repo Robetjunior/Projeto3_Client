@@ -42,56 +42,62 @@ export default function Transaction() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="exampleInputExamil1">FirstName</label>
+    <div className="  container-fluid mt-auto mr-auto d-flex justify-content-center align-items-center form-body">
+    <div className="align p-5 form-shadow">
+    <h1 className="text-center">Donate</h1>
+    <hr></hr>
+    <form onSubmit={handleSubmit} className="form login">
+      <div className="form__field">
+        <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputExamil1">FirstName</label>
         <input
           type="text"
-          className="form-control form-control-lg"
+          className="form-control form-control-lg form__input"
           id="authUsernameField"
           name="firstName"
+          placeholder="João"
           onChange={handleChange}
           value={user.firstName}
         />
       </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputEmail1">LastName</label>
+      <div className="form-group form__field">
+        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1">LastName</label>
         <input
           type="text"
-          className="form-control form-control-lg"
+          className="form-control form-control-lg form__input"
           name="lastName"
+          placeholder="Neves"
           id="authEmailField"
           onChange={handleChange}
           value={user.lastName}
         />
       </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputEmail1">Email</label>
+      <div className="form__field">
+        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1">Email</label>
         <input
           type="text"
-          className="form-control form-control-lg"
+          className="form-control form-control-lg form__input"
           name="email"
           id="authPasswordField"
           onChange={handleChange}
           value={user.email}
         />
       </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputEmail1">Phone</label>
+      <div className="form__field">
+        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1">Phone</label>
         <input
           type="number"
-          className="form-control form-control-lg"
+          className="form-control form-control-lg form__input"
           name="phone"
           id="authAddressField"
           onChange={handleChange}
           value={user.phone}
         />
       </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputEmail1">Value</label>
+      <div className="form__field">
+        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1">Value</label>
         <input
           type="value"
-          className="form-control form-control-lg"
+          className="form-control form-control-lg form__input"
           name="value"
           id="authPhoneField"
           onChange={handleChange}
@@ -102,5 +108,8 @@ export default function Transaction() {
         Doar
       </button>
     </form>
+    </div>
+    </div>
   );
 }
+
