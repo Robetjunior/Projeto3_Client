@@ -22,10 +22,8 @@ function CreateAnnouncement() {
 
   async function handleSubmit(data) {
     try {
-      /////////// VERIFICAR ATRIBUTO ONGID ESTA VINDO VAZIO ///////////////////////////
       const result = await announcementApi.post("/create", data);
       history.push("/ong/profile");
-      /////////// VERIFICAR ATRIBUTO ONGID ESTA VINDO VAZIO ///////////////////////////
     } catch (err) {
       console.error(err);
     }
@@ -39,11 +37,10 @@ function CreateAnnouncement() {
 
       const result = await announcementApi.post("/upload-image", uploadData);
 
-      console.log(result.data.ImageUrl);
+      console.log(result.data);
 
       // Retorna a URL do arquivo no Cloudinary
-      return result.data.ImageUrl;
-
+      return result.data;
     } catch (err) {
       console.error(err);
     }
@@ -51,8 +48,6 @@ function CreateAnnouncement() {
 
   return (
     <div className="container-fluid form-body">
-      
-
       <FormAnnouncement
         handleSubmit={handleSubmit}
         setAnnouncement={setAnnouncement}
