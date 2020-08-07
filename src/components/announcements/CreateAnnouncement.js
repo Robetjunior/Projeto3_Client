@@ -37,7 +37,7 @@ function CreateAnnouncement() {
 
       uploadData.append("imgPath", data);
 
-      const result = await announcementApi.post("/announ/upload-image", uploadData);
+      const result = await announcementApi.post("/upload-image", uploadData);
 
       console.log(result.data.ImageUrl);
 
