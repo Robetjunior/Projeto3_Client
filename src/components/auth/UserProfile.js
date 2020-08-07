@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 
+import { Link } from 'react-router-dom';
+
 import ongApi from "../../apis/ong";
+
+import '../../assets/styles/profile.css'
 
 // import ListAnnProfile from "./ListAnnProfile";
 
@@ -26,22 +30,33 @@ const UserProfile = () => {
   }, []);
 
   return (
-    <div>
-      <h1>User: {user.name}</h1>
-      <p>Email: {user.email}</p>
-      <p>Phone: {user.phone}</p>
-      <p>Addres: {user.address}</p>
+    <div className="container-fluid row">
 
+      <div className="col-sm-4 info-profile">
+        <h1>Seja Bem-vindo: {user.name}</h1>
+        <span><strong>Email: </strong>{user.email}</span><br></br>
+        <span><strong>Phone: </strong>{user.phone}</span><br></br>
+        <span><strong>Endereço: </strong>{user.address}</span>
+      </div>
+      <div className="col-sm-7">
+
+      <h1 className="title-campanhas">Suas campanhas: </h1>
       {user.adId.map((annun, i) => {
         return (
-          <div key={i}>
-            <img src={annun.imgPath} alt="Announcement" />
-            <h1>Title: {annun.title}</h1>
-            <p> Value: $  {annun.value},00</p>
+          <div key={i} className="card">
+            <div>
+               <img src={annun.imgPath} className="img" alt="Announcement" />
+            </div>
+            <div className="card-body">
+             <h1 classNAme="card-title">{annun.title}</h1>
+              <span className="card-text"><strong>Valor: $</strong>{annun.value},00</span>
+            </div>
+
           </div>
+          
         );
       })}
-      {/* <ListAnnProfile user={user} /> */}
+      </div>
     </div>
   );
 };
