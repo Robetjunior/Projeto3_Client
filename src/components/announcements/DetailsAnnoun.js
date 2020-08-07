@@ -23,31 +23,37 @@ const DetailsAnnoun = () => {
 
   return (
     <div className="details">
-      <img src={announ.imgPath} />
+      <div className="img-details">
+          <img src={announ.imgPath} />
+      </div>
+      <div className="title">
         <h3>{announ.title}</h3> 
-        <p>Description: {announ.description}</p>
-        <h5>Value total: ${announ.value},00</h5>
+        <p><strong>Descrição: </strong>{announ.description}</p>
+      </div>
         <h4>Donate!</h4>
       <Link
-        className="btn btn-lg btn-primary"
+        className="btn"
         to={`/transaction/create/${id}?value=${30}`}
       >
         $30
       </Link>
 
       <Link
-        className="btn btn-lg btn-primary"
+        className="btn"
         to={`/transaction/create/${id}?value=${50}`}
       >
         $50
       </Link>
 
       <Link
-        className="btn btn-lg btn-primary"
+        className="btn"
         to={`/transaction/create/${id}?value=${100}`}
       >
         $100
       </Link>
+      <div className="meta">
+            <h5>Meta : ${announ.value},00</h5>
+      </div>
     </div>
   );
 };
