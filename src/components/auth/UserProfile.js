@@ -45,10 +45,8 @@ const UserProfile = () => {
                <img src={annun.imgPath} className="img" alt="Announcement" />
             </div>
             <div className="card-body">
-        <h1 classNAme="card-title">{annun.title}</h1>
+             <h1 classNAme="card-title">{annun.title}</h1>
               <span className="card-text"><strong>Valor: $</strong>{annun.value},00</span>
-              <Link className="btn-doa">Doações</Link>
-              <Link className="btn-del" to={`/announcement/delete/${annun._id}`}>Encerrar</Link>
             </div>
           </div>
         );
