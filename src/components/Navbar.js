@@ -50,7 +50,7 @@ const Navbar = (props) => {
                 <Link className="text-light nav-text-color  hover-button " to="/ong/profile">
                 
 
-                  {props.loggedInUser.email}
+                  Profile
                 </Link>
               </span>
               </li>
@@ -71,13 +71,15 @@ const Navbar = (props) => {
             </React.Fragment>
           )}
 
-        </ul>
+       
         {props.loggedInUser._id ? (
           <Link className="nav-link nav-text-color hover-button " to="/logout">
            
             Logout
           </Link>
+      
         ) : null}
+        </ul>
       </div>
     </nav>
   );

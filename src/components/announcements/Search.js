@@ -35,13 +35,13 @@ function Search() {
 
   return (
     <div className="input-group input-group-lg mb-4 d-flex justify-content-center" >
-      <div className="w-50">
+      <div className="w-50 pb-5">
        
           <div className="form__field">
-        <label>
+        <label className="d-flex justify-content-center align-items-center back-label">
       <svg
-            width="2.5em"
-            height="2.5em"
+            width="1.5em"
+            height="1.5em"
             viewBox="0 0 16 16"
             className="bi bi-search"
             fill="currentColor"

@@ -405,7 +405,7 @@
 
 .card-donate{
   box-shadow: 4px 4px #35353538;
-  border: 1px solid rgba(88, 87, 87, 0.801);
+
 }
 
 .text-donate {
@@ -443,10 +443,61 @@
   background-color: rgba(180, 164, 134, 0);
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
-
+  box-shadow: 4px 4px #35353538
 }
 .card-title{
   background-color: orangered;
   color:white;
+  text-align: center;
 }
 
+
+.image-control-profile{
+  min-width: 25vw;
+  height: auto;
+  max-width: 50vw;
+}
+.image-control-detail{
+  min-width: 25vw;
+  height: auto;
+  max-width: 45vw;
+}
+
+.card-profile{
+  
+    height: 25rem !important;
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+.profile-back{
+  background-color: rgb(78, 78, 78);
+  color:rgb(255, 255, 255);
+}
+
+.profile-announcements{
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+.profile-title{
+  margin-bottom: 2rem;
+}
+
+.back-label{
+  background-color:orangered;
+  color:white;
+  border-bottom-left-radius: 10%;
+  border-top-left-radius: 10%;
+  padding: .75rem;
+}
+.back-label:hover{
+  background-color:rgb(255, 255, 255);
+  color:orangered
+  
+}
+
+.scroll{
+  overflow:auto;
+  height:100vh
+}

@@ -24,7 +24,7 @@ const DetailsAnnoun = () => {
       <div className="align p-5 form-shadow w-50">
         <h1 className="text-center">{announ.title}</h1>
         <hr></hr>
-        <img src={announ.imgPath} alt="Announcement" />
+        <img className="img image-control-detail " src={announ.imgPath} alt="Announcement" />
         <div className="form__field d-flex justify-content-center align-items-center">
           <p>Description: {announ.description}</p>
         </div>
