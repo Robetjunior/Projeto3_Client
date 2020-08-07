@@ -405,7 +405,7 @@
 
 .card-donate{
   box-shadow: 4px 4px #35353538;
-  border: 1px solid rgba(190, 190, 190, 0.26);
+  border: 1px solid rgba(88, 87, 87, 0.801);
 }
 
 .text-donate {
@@ -436,5 +436,17 @@
 .image-size-control{
   min-width: 25vw;
   height: auto;
-  max-width: 50vw;
+  max-width: 35vw;
 }
+
+.cardss{
+  background-color: rgba(180, 164, 134, 0);
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+
+}
+.card-title{
+  background-color: orangered;
+  color:white;
+}
+

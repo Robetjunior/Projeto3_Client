@@ -45,7 +45,7 @@ const UserProfile = () => {
         return (
           <div key={i} className="card">
             <div>
-               <img classname="image-size-control" src={annun.imgPath} className="img" alt="Announcement" />
+               <img src={annun.imgPath} className="img image-size-control" alt="Announcement" />
             </div>
             <div className="card-body">
              <h1 classNAme="card-title">{annun.title}</h1>
