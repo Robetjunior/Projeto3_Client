@@ -2,16 +2,29 @@ import React from "react";
 
 const FormAnnouncement = (props) => {
   function handleChange(event) {
-    props.setAnnouncement({
-      ...props.announcement,
-      [event.currentTarget.name]: event.currentTarget.value,
-    });
-  }
+    if (event.currentTarget.files) {
+      return props.setAnnouncement({
+        ...props.task,
+        [event.currentTarget.name]: event.currentTarget.files[0],
+      });
+    }
+
+  props.setAnnouncement({
+    ...props.announcement,
+    [event.currentTarget.name]: event.currentTarget.value,
+  });
+}
+
 
   async function handleSubmit(event) {
     event.preventDefault();
 
-    props.handleSubmit(props.announcement);
+    const ImageUrl = await props.handleFileUpload(props.announcement.ImageUrl);
+
+    props.setAnnouncement({
+      ...props.announcement,
+      ImageUrl,
+    });
   }
 
   return (
@@ -55,12 +68,11 @@ const FormAnnouncement = (props) => {
         <label htmlFor="exampleInputOngId"><i className="fa fa-user-circle-o" aria-hidden="true"></i></label>
         <input
           type="file"
-          className="form-control form-control-lg form__input"
-          id="announcementOngIdField"
+          className="form-control form-control-lg"
+          id="imgPath"
           name="imgPath"
           placeholder="Image"
           onChange={handleChange}
-          value={props.announcement.imgPath}
         />
       </div>
       <div className="form__field">
@@ -92,5 +104,6 @@ const FormAnnouncement = (props) => {
 
   );
 };
+
 
 export default FormAnnouncement;
