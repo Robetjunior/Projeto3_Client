@@ -4,22 +4,21 @@ const FormAnnouncement = (props) => {
   function handleChange(event) {
     if (event.currentTarget.files) {
       return props.setAnnouncement({
-        ...props.task,
+        ...props.announcement,
         [event.currentTarget.name]: event.currentTarget.files[0],
       });
     }
 
-  props.setAnnouncement({
-    ...props.announcement,
-    [event.currentTarget.name]: event.currentTarget.value,
-  });
-}
-
+    return props.setAnnouncement({
+      ...props.announcement,
+      [event.currentTarget.name]: event.currentTarget.value,
+    });
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const ImageUrl = await props.handleFileUpload(props.announcement.ImageUrl);
+    const ImageUrl = await props.handleFileUpload(props.announcement.imgPath);
 
     props.setAnnouncement({
       ...props.announcement,
@@ -100,8 +99,8 @@ const FormAnnouncement = (props) => {
 
  
 
+
   );
 };
-
 
 export default FormAnnouncement;
