@@ -16,8 +16,8 @@ const FormSignup = (props) => {
 
   return (
     <div className="container-fluid mt-auto mr-auto d-flex justify-content-center align-items-center form-body ">
-      <div className="align form-shadow p-4 ">
-      <h1 className="text-center">Signup</h1>
+      <div className="align form-shadow w-25 pb-5 pt-4 ">
+      <h1 className="text-center">Cadastro</h1>
       <hr></hr>
         <div className="grid">
       <form onSubmit={handleSubmit} className="form login">
@@ -25,10 +25,10 @@ const FormSignup = (props) => {
           <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputUserName1"><i className="fa fa-user-circle-o" aria-hidden="true"></i></label>
           <input
             type="text"
-            className="form-control form-control-lg form__input"
+            className="form-control form__input"
             id="authUsernameField"
             name="username"
-            placeholder="Username"
+            placeholder="Usuário"
             onChange={handleChange}
             value={props.user.username}
           />
@@ -38,21 +38,21 @@ const FormSignup = (props) => {
       <i className="fa fa-envelope" aria-hidden="true"></i>
      </label>
  
-      <input id="authUsernameField" type="text" name="email" className="form__input" onChange={handleChange} value={props.user.email} placeholder="Example@email.com" required />
+      <input id="authUsernameField" type="text" name="email" className="form__input" onChange={handleChange} value={props.user.email} placeholder="Exemplo@email.com" required />
     </div>
 
     <div className="form__field">
-      <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputPassword1"><i className="fa fa-lock" aria-hidden="true"></i><span className="hidden">Password</span></label>
+      <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputPassword1"><i className="fa fa-lock" aria-hidden="true"></i></label>
       <input id="authPasswordField" type="password" name="password" className="form__input" onChange={handleChange}
-            value={props.user.password} placeholder="Password" required/>
+            value={props.user.password} placeholder="Senha" required/>
     </div>
         <div className="form__field">
-          <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputEmail1"><i className="fa fa-map" aria-hidden="true"></i></label>
+          <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputEmail1"><i className="fa fa-map-marker" aria-hidden="true"></i></label>
           <input
             type="text"
-            className="form-control form-control-lg form__input"
+            className="form-control  form__input"
             name="address"
-            placeholder="Adress Avenida Paulista  "
+            placeholder="Endereço "
           
             id="authAddressField"
             onChange={handleChange}
@@ -63,7 +63,7 @@ const FormSignup = (props) => {
           <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputEmail1"><i className="fa fa-phone-square" aria-hidden="true"></i></label>
           <input
             type="number"
-            className="form-control form-control-lg form__input"
+            className="form-control form__input"
             name="phone"
             placeholder="Tel (55)55555-5555"
         
@@ -76,9 +76,9 @@ const FormSignup = (props) => {
           <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputEmail1"><i className="fa fa-industry" aria-hidden="true"></i></label>
           <input
             type="number"
-            className="form-control form-control-lg form__input"
+            className="form-control form__input"
             name="cnpj"
-            placeholder="Cnpj 01234567890123"
+            placeholder="Cnpj"
            
             id="authCnpjField"
             onChange={handleChange} 

@@ -16,8 +16,8 @@ const FormLogin = (props) => {
 
   return (
     <div className="  container-fluid mt-auto mr-auto d-flex justify-content-center align-items-center form-body">
-    <div className="align p-5 form-shadow">
-    <h1 className="text-center">Login</h1>
+    <div className="align pb-5 pt-5 form-shadow w-25">
+    <h1 className="text-center">Entrar</h1>
       <hr></hr>
 <div className="grid">
 
@@ -28,15 +28,15 @@ const FormLogin = (props) => {
       <i className="fa fa-envelope" aria-hidden="true"></i>
      </label>
  
-      <input id="authUsernameField" type="text" name="email"             className="form-control form-control-lg form__input"
- onChange={handleChange} value={props.user.email} placeholder="Example@email.com" required />
+      <input id="authUsernameField" type="text" name="email"className="form-control form__input"
+ onChange={handleChange} value={props.user.email} placeholder="Exemplo@email.com" required />
     </div>
 
     <div className="form__field">
       <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputPassword1"><i className="fa fa-lock" aria-hidden="true"></i><span className="hidden">Password</span></label>
-      <input id="authPasswordField" type="password" name="password"             className="form-control form-control-lg form__input"
+      <input id="authPasswordField" type="password" name="password"             className="form-control  form__input"
  onChange={handleChange}
-            value={props.user.password} placeholder="Password" required/>
+            value={props.user.password} placeholder="Senha" required/>
     </div>
 
     <div className="form__field">
@@ -45,7 +45,7 @@ const FormLogin = (props) => {
 
   </form>
 
-  <p className="text--center">Not a member? <a href="/signup">Sign up now</a> </p>
+  <p className="text--center">Não tem cadastro ? <a href="/signup">Cadastre-se</a> </p>
 
 </div>
 

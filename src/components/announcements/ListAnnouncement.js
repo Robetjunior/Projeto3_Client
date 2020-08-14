@@ -8,7 +8,7 @@ function ListAnnouncement(props) {
   return (
     <div className="container-fluid">
     <div className="profile-announcements">
-      <h1 >Campaings</h1>
+      <h1 >Campanhas</h1>
       </div>
       <div className="row d-flex justify-content-around ">
         {props.announList.map((ann, i) => {

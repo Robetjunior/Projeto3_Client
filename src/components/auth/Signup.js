@@ -34,7 +34,7 @@ function Signup() {
         handleSubmit={handleSubmit}
         setUser={setUser}
         user={user}
-        buttonText="Sign up"
+        buttonText="Cadastrar"
       />
     </div>
   );

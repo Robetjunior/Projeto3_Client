@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 import announApi from "../../apis/announcement";
 
+import {WhatsappShareButton} from "react-share";
+
+
 const DetailsAnnoun = () => {
   const [announ, setAnnoun] = useState({});
   const { id } = useParams();
@@ -20,58 +23,55 @@ const DetailsAnnoun = () => {
   }, [id]);
 
   return (
-    <div className="  container-fluid mt-auto mr-auto mt-5 p-5 justify-content-center align-items-center form-body">
-      <div className="row">
-        <div className="col-sm-7 img-details">
-  
-          <img className="image-control-detail" src={announ.imgPath} alt="Announcement" />
-        </div>
-   
-        <div className="col-sm-4 ">
-        <h1 className="text-center"> {announ.title} </h1>
-          <hr></hr>
-           <h5>Meta : ${announ.value},00</h5>
-      
-          <p>
-            <strong>Descrição: </strong>
-            {announ.description}
-          </p>
-            
-        </div>
+    <div className="background_dark">
+    <div className="card-detail">
+    <div className="thumbnail"><img className="left image-control-profile" src={announ.imgPath} /></div>
+    <div className="right">
+        <h4 className="detail-h1">{announ.title}</h4>
+
+       
+          
+	 
+            <h5 className="detail-h3">Meta : R${announ.value},00 </h5>
+     
+        <div className="separator "></div>
+        <div className="text-box"> <p className="detail-h5"> <strong>Sobre: </strong>
+            {announ.description}</p></div>
+       
     </div>
-    <div className="col-sm-12"> 
-    <div className="form__field d-flex justify-content-center align-items-center">
-          <h4>Donate!</h4>
-        </div>
-        <div className=" d-flex justify-content-center align-items-center">
-          <Link
+  
+    <ul className="detail mt-4">
+        <li><Link
             className="btn btn-lg btn-primary m-3"
             to={`/transaction/create/${id}?value=${30}`}
           >
-            $30
-          </Link>
-
-          <Link
+            R$30
+          </Link></li>
+        <li><Link
             className="btn btn-lg btn-primary m-3"
             to={`/transaction/create/${id}?value=${50}`}
           >
-            $50
-          </Link>
-
-          <Link
+            R$50
+          </Link></li>
+        <li><Link
             className="btn btn-lg btn-primary m-3"
             to={`/transaction/create/${id}?value=${100}`}
           >
-            $100
-          </Link>
-          <Link
+            R$100
+          </Link></li>
+        <li><Link
             className="btn btn-lg btn-primary m-3"
             to={`/transaction/create/${id}?value=${0}`}
           >
-            Other
-          </Link>
-        </div>
-      </div>
+            Outro
+          </Link></li>
+        <li>Compartilhe   <WhatsappShareButton className="ml-2 "	url='http://donmake.herokuapp.com/announcements'
+									title='Let"s Donate'>
+								
+                <i className="fa fa-whatsapp  whats-icon p-2 fa-2x" aria-hidden="true"/>
+                </WhatsappShareButton>	 </li>
+    </ul>
+   </div>
       
       </div>
    
