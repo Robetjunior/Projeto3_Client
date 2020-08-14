@@ -34,7 +34,7 @@ function Login(props) {
         handleSubmit={handleSubmit}
         setUser={setUser}
         user={user}
-        buttonText="Login"
+        buttonText="Entrar"
       />
     </div>
     

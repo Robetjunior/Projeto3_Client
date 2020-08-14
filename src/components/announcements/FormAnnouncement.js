@@ -32,7 +32,7 @@ const FormAnnouncement = (props) => {
 
       <div className="align form-shadow p-5 ">
 
-      <h1 className="text-center">Announcement</h1>
+      <h1 className="text-center">Campanha</h1>
       <hr></hr>
 
         <div className="">
@@ -44,27 +44,27 @@ const FormAnnouncement = (props) => {
           className="form-control form-control-lg form__input"
           id="announcementTitleField"
           name="title"
-          placeholder="Title"
+          placeholder="Título"
           onChange={handleChange}
           value={props.announcement.title}
         />
       </div>
 
       <div className="form__field">
-        <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputTitle"><i className="fa fa-user-circle-o" aria-hidden="true"></i></label>
+        <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputTitle"><i className="fa fa-money" aria-hidden="true"></i></label>
         <input
           type="number"
           min="0"
           className="form-control form-control-lg form__input"
           id="announcementValueField"
           name="value"
-          placeholder="Value 12000"
+          placeholder="Arrecadação R$ 1000,00"
           onChange={handleChange}
           value={props.announcement.value}
         />
       </div>
       <div className="form__field">
-        <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputOngId"><i className="fa fa-user-circle-o" aria-hidden="true"></i></label>
+        <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputOngId"><i className="fa fa-file-image-o" aria-hidden="true"></i></label>
         <input
           type="file"
           className="form-control form-control-lg"
@@ -74,19 +74,19 @@ const FormAnnouncement = (props) => {
         />
       </div>
       <div className="form__field">
-        <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputDescription"><i className="fa fa-user-circle-o" aria-hidden="true"></i></label>
+        <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputDescription"><i className="fa fa-file-text" aria-hidden="true"></i></label>
         <textarea
           rows="5"
           cols="50"
           className="form-control form-control-lg form__input"
           id="announcementDescriptionField"
           name="description"
-          placeholder="Enter description here ..."
+          placeholder="Entre com a descrição ..."
           onChange={handleChange}
           value={props.announcement.description}
         >
           {" "}
-          Enter description here ...{" "}
+          Entre com a descrição ...{" "}
         </textarea>
       </div>
       <div className="form__field">

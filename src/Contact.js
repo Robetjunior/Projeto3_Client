@@ -1,8 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LogoImg from "../logo.png"
+import React from "react"
 
-const Navbar = (props) => {
+//Colaborators
+// import Colaborator3 from "../colaborador3.jpg"
+// import Colaborador2 from "../colaborador2.png"
+// import Colaborador1 from "../Colaborador1.jpeg"
+
+const Comments = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark  navfixed ">
       <Link className="navbar-brand" to="/">
@@ -30,7 +33,7 @@ const Navbar = (props) => {
           <li className="nav-item ml-auto ">
             <Link className="nav-link nav-text-color hover-button" to="/about">
               
-              Contato
+              Sobre
             </Link>
           </li>
           {props.loggedInUser._id ? (
@@ -46,7 +49,7 @@ const Navbar = (props) => {
           <li className="nav-item ml-auto">
             <Link className="nav-link nav-text-color hover-button " to="/announcements">
              
-              Campanhas
+              Campanha
             </Link>
           </li>
           ) : null}
@@ -90,6 +93,6 @@ const Navbar = (props) => {
       </div>
     </nav>
   );
-};
+}
 
-export default Navbar;
+export default Comments

@@ -60,7 +60,7 @@ function Search() {
         <input
           type="text"
           className="form-control form-control-lg"
-          placeholder="Search for a announcement"
+          placeholder="Procure uma campanha"
           onKeyUp={filterAnnoun}
         />
       </div>

@@ -48,43 +48,43 @@ export default function Transaction() {
     <hr></hr>
     <form onSubmit={handleSubmit} className="form login">
       <div className="form__field">
-        <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputExamil1">FirstName</label>
+        <label className="d-flex justify-content-center align-items-center" htmlFor="exampleInputExamil1"><i class="fa fa-user" aria-hidden="true"></i></label>
         <input
           type="text"
           className="form-control form-control-lg form__input"
           id="authUsernameField"
           name="firstName"
-          placeholder="João"
+          placeholder="Nome ex: João"
           onChange={handleChange}
           value={user.firstName}
         />
       </div>
       <div className="form-group form__field">
-        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1">LastName</label>
+        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1"><i class="fa fa-user" aria-hidden="true"></i></label>
         <input
           type="text"
           className="form-control form-control-lg form__input"
           name="lastName"
-          placeholder="Neves"
+          placeholder="Sobrenome ex:Neves"
           id="authEmailField"
           onChange={handleChange}
           value={user.lastName}
         />
       </div>
       <div className="form__field">
-        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1">Email</label>
+        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1"><i class="fa fa-envelope" aria-hidden="true"></i></label>
         <input
           type="text"
           className="form-control form-control-lg form__input"
           name="email"
           id="authPasswordField"
-          placeholder="Example@e-mail.com"
+          placeholder="Exemplo@email.com"
           onChange={handleChange}
           value={user.email}
         />
       </div>
       <div className="form__field">
-        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1">Phone</label>
+        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1"><i class="fa fa-phone-square" aria-hidden="true"></i></label>
         <input
           type="number"
           className="form-control form-control-lg form__input"
@@ -96,7 +96,7 @@ export default function Transaction() {
         />
       </div>
       <div className="form__field">
-        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1">Value</label>
+        <label className="d-flex justify-content-center align-items-center"  htmlFor="exampleInputEmail1"><i class="fa fa-money" aria-hidden="true"></i></label>
         <input
           type="value"
           className="form-control form-control-lg form__input"
@@ -104,12 +104,12 @@ export default function Transaction() {
           id="authPhoneField"
           
           onChange={handleChange}
-          value={user.value}
+          value= {user.value}
         />
       </div>
-      <button type="submit" classvalue="btn btn-lg btn-primary">
-        Doar
-      </button>
+      <div className="form__field">
+      <input type="submit" value="Realizar Doação"/>
+      </div>
     </form>
     </div>
     </div>

@@ -54,7 +54,7 @@ function CreateAnnouncement() {
         setAnnouncement={setAnnouncement}
         announcement={announcement}
         handleFileUpload={handleFileUpload}
-        buttonText="Create"
+        buttonText="Criar"
       />
     </div>
   );
