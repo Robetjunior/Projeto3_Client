@@ -59,7 +59,7 @@ function Search() {
           </label>
         <input
           type="text"
-          className="form-control form-control-lg"
+          className="form-control form-control-lg color"
           placeholder="Procure uma campanha"
           onKeyUp={filterAnnoun}
         />

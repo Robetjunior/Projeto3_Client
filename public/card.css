@@ -26,9 +26,12 @@
    width:28vw;
    height:auto
  }
+ .color{
+   color:black !important
+}
  .text-donate{
    font-family: 'Varela Round', sans-serif;;
- 
+
  }
  .donate-img{
 
