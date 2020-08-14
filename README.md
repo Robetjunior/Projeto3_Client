@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<h1> <a href="http://donmake.herokuapp.com/">DonMaker </a></h1>
 
-### `npm start`
+<h4>A DonMaker foi criada como uma plataforma de gerenciamento de campanhas de doação, onde dividimos ela em duas partes: </h4>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h5>Ongs tem seu espaço próprio para cadastro e criação de campanhas, onde podem informar sobre o que é a campanha em questão e o quanto precisam para a compra dos materiais necessários. No caso a Ong cadastra um valor de campanha e nós realizamos a captação do recurso
+e distribuimos o valor destinado a ela já enviando como o recurso solicitado como por exemplo: alimentos, materiais de construção, roupas, etc.</h5>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<h5>Doadores podem selecionar as campanhas que desejarem ajudar e podem doar os valores solicitados e com isso ajudar inúmeras pessoas. Nesse caso elas podem compartilhar com o whatsapp a pagina de doação e ajudar a divulgar mais ainda as campanhas.</h5>
+ 
+<h2>Tecnologias </h2>
+<ul>
 
-### `npm test`
+<li> JavaScript ES6</li>
+<li> React</li>
+<li> CSS3</li>
+<li> HTML5</li>
+<li> NodeJS</li>
+<li> MongoDB</li>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</ul>
 
-### `npm run build`
+<h3><a href="https://github.com/Robetjunior/DONMAKER">SERVER </a></h3>
+<h2> Configuração para Desenvolvimento:</h2>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para instalar as dependências do projeto:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+> npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Antes de testar a aplicação:
 
-### `npm run eject`
+> npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ou
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> npm run dev
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h2> Desenvolvedores:</h2>
 
-### Code Splitting
+<h3> <a href="https://github.com/EduardosMuller">Eduardo S. Müller</a></h3>
+ <h3> <a href="https://github.com/Robetjunior">José Roberto </a></h3>
+<h3> <a href="https://github.com/Erick-34">Erick Henrique</a></h3
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+ 
+<h2>Contribuições:</h2>
+<ul>
 
-### Making a Progressive Web App
+<li> Faça o fork do projeto (https://github.com/yourname/yourproject/fork) </li>
+<li> Crie uma branch para sua modificação (git checkout -b feature/fooBar) </li>
+<li> Faça o commit (git commit -am 'Add some fooBar') </li>
+<li> Push (git push origin feature/fooBar) </li>
+<li> Crie um novo Pull Request </li>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+</ul>
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<h2>Agradecimentos</h2>
+Nossos colegas, nossa TA Julia ao professor Pedro.
